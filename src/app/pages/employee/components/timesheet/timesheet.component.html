@@ -1,0 +1,22 @@
+<nb-card>
+  <nb-card-header>
+   <h4> Time Sheet</h4>
+  </nb-card-header>
+
+  <nb-card-body>
+    <ng2-smart-table [source]="source" (deleteConfirm)="onDeleteConfirm($event)"  [settings]="settings">
+    </ng2-smart-table>
+  </nb-card-body>
+</nb-card>
+
+
+<!-- <nb-card>
+  <nb-card-header>
+    <h4> Time Sheet</h4>
+  </nb-card-header>
+  <nb-card-body>
+    <table>
+      <th>Date</th>
+    </table>
+  </nb-card-body>
+</nb-card> -->
