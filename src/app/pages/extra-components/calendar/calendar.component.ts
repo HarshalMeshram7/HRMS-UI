@@ -20,8 +20,6 @@ export class CalendarComponent {
       start: this.dateService.addDay(this.monthStart, 3),
       end: this.dateService.addDay(this.monthEnd, -3),
     };
-    console.log(this.range.start);
-
   }
 
   get monthStart(): Date {

@@ -8,9 +8,9 @@ import { NbComponentStatus } from '@nebular/theme';
   styleUrls: ['./regform.component.scss']
 })
 export class RegformComponent implements OnInit {
+  submit: NbComponentStatus[] = [ 'danger'];
   statuses: NbComponentStatus[] = [ 'success'];
   previous: NbComponentStatus[] = [ 'warning'];
-  submit: NbComponentStatus[] = [ 'danger'];
   
 
   constructor(private fb: FormBuilder) {

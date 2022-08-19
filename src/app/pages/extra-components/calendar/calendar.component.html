@@ -6,10 +6,9 @@
     <nb-calendar [(date)]="date" [boundingMonth]="true" showWeekNumber></nb-calendar>
   </div>
 
-
   <div class="calendar-container">
     <span class="subtitle">
-     You Selected : {{ range.start | date }} - {{ range.end | date }}
+      Selected range: {{ range.start | date }} - {{ range.end | date }}
     </span>
     <nb-calendar-range [(range)]="range"></nb-calendar-range>
   </div>

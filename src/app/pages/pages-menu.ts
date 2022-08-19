@@ -37,6 +37,11 @@ export const MENU_ITEMS: NbMenuItem[] = [
         link :'/pages/employee/timesheet',
         icon: 'clock-outline'
       },
+      {
+        title: 'Leave',
+        link :'/pages/employee/leave',
+        icon: 'image-outline'
+      },
       
     ]
   },

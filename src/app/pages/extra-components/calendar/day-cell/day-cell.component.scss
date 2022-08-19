@@ -10,7 +10,7 @@
 
   &.selected .caption,
   &:hover .caption {
-    color: nb-theme(text-control-color);
+    color: red;
   }
 
   &.bounding-month .caption {

@@ -1,5 +1,5 @@
 import { NgModule } from '@angular/core';
-import { NbAccordionModule, NbActionsModule, NbButtonModule, NbCardModule, NbCheckboxModule, NbDatepickerModule, NbIconModule, NbInputModule, NbListModule, NbRadioModule, NbRouteTabsetModule, NbSelectModule, NbStepperModule, NbTabsetModule, NbTreeGridModule, NbUserModule } from '@nebular/theme';
+import { NbAccordionModule, NbActionsModule, NbAlertModule, NbButtonModule, NbCalendarKitModule, NbCalendarModule, NbCalendarRangeModule, NbCardModule, NbChatModule, NbCheckboxModule, NbDatepickerModule, NbIconModule, NbInputModule, NbListModule, NbProgressBarModule, NbRadioModule, NbRouteTabsetModule, NbSelectModule, NbSpinnerModule, NbStepperModule, NbTabsetModule, NbTreeGridModule, NbUserModule } from '@nebular/theme';
 import { ThemeModule } from '../../@theme/theme.module';
 import { EmployeeDirectoryComponent } from './components/employee-directory/employee-directory.component';
 import { RegformComponent } from './components/regform/regform.component';
@@ -10,6 +10,7 @@ import { LayoutRoutingModule } from '../layout/layout-routing.module';
 import { TimesheetComponent } from './components/timesheet/timesheet.component';
 import { Ng2SmartTableModule } from 'ng2-smart-table';
 import { TablesRoutingModule } from '../tables/tables-routing.module';
+import { LeaveComponent } from './components/leave/leave.component';
 
 const components = [
   EmployeeContainerComponent,
@@ -52,8 +53,14 @@ const components = [
     ThemeModule,
     TablesRoutingModule,
     Ng2SmartTableModule,
+    NbActionsModule,
+  NbCalendarKitModule,
+  NbCalendarModule,
+  NbCalendarRangeModule,
+
+ 
 
   ],
-  declarations: [...EmployeeRoutedComponents, ...components, TimesheetComponent],
+  declarations: [...EmployeeRoutedComponents, ...components, TimesheetComponent, LeaveComponent],
 })
 export class EmployeeModule {}
