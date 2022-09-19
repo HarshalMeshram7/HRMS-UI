@@ -46,6 +46,27 @@ export class EmployeePageContentComponent implements OnInit {
       JoinDate: ["", [Validators.required]],
       CompanyName: ["", [Validators.required]],
       EmployeeID: ["", [Validators.required]],
+      DateOfBirth: ["", [Validators.required]],
+      GenderMale: ["", [Validators.required]],
+      GenderFemale: ["", [Validators.required]],
+      EmpId: ["", [Validators.required]],
+      Department: ["", [Validators.required]],
+      SubDepartment: ["", [Validators.required]],
+      Designation1: ["", [Validators.required]],
+      JobTitle: ["", [Validators.required]],
+      WorkLocation: ["", [Validators.required]],
+      EmployeeType: ["", [Validators.required]],
+      ProbationPeriod: ["", [Validators.required]],
+      DateOfJoining1: ["", [Validators.required]],
+      DateOfJoining2: ["", [Validators.required]],
+      DateOfRelieving1: ["", [Validators.required]],
+      DateOfRelieving2: ["", [Validators.required]],
+      YearsExp1: ["", [Validators.required]],
+      YearsExp2: ["", [Validators.required]],
+      ParmanentAddress: ["", [Validators.required]],
+      TemporaryAddress: ["", [Validators.required]],
+      ReportingManager: ["", [Validators.required]],
+
     });
 
     this.editEmployeeForm = this.formBuilder.group({
@@ -61,6 +82,10 @@ export class EmployeePageContentComponent implements OnInit {
       JoinDate: ["", [Validators.required]],
       CompanyName: ["", [Validators.required]],
       EmployeeID: ["", [Validators.required]],
+      SubDepartment: ["", [Validators.required]],
+      Department: ["", [Validators.required]],
+      
+
     });
   }
 

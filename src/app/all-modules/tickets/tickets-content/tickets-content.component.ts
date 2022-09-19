@@ -146,8 +146,8 @@ export class TicketsContentComponent implements OnInit, OnDestroy {
         priority: this.addTicketForm.value.PriorityName,
         assigne: this.addTicketForm.value.AssignName,
         addfollow: this.addTicketForm.value.addFlowers,
-        createdDate: "05-05-2020",
-        lastReply: "11-05-2020",
+        createdDate: new Date(),
+        lastReply: "11-12-2022",
         status: "Pending",
       };
       this.allModuleService.add(obj, this.url).subscribe((data) => {

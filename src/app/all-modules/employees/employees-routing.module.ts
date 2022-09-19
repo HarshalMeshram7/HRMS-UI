@@ -75,7 +75,7 @@ const routes: Routes = [
       {
         path: 'demo',
         component: DemoComponent
-      }
+      },
 
     ]
   }

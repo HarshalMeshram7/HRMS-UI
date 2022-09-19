@@ -174,8 +174,12 @@
                   urlComplete.subUrl === 'overtime') ||
                 (urlComplete.mainUrl === 'employees' &&
                   urlComplete.subUrl === 'employeelist') ||
-                urlComplete.mainUrl === 'scheduling' ||
-                urlComplete.mainUrl === 'shift'
+
+                  (urlComplete.mainUrl === 'employees' &&
+                  urlComplete.subUrl === 'demo') ||
+
+               ( urlComplete.mainUrl === 'scheduling') ||
+               ( urlComplete.mainUrl === 'shift' )
             }"
           >
             <a
@@ -206,9 +210,13 @@
                     urlComplete.subUrl === 'overtime') ||
                   (urlComplete.mainUrl === 'employees' &&
                     urlComplete.subUrl === 'employeelist') ||
+
+                    (urlComplete.mainUrl === 'employees' &&
+                  urlComplete.subUrl === 'demo') ||
+
                   urlComplete.mainUrl === 'scheduling' ||
-                  urlComplete.mainUrl === 'shift' ||
-                  urlComplete.manUrl === 'demo'
+                  urlComplete.mainUrl === 'shift' 
+                 
               }"
               class="noti-dot"
               ><i class="la la-user"></i> <span> Employees</span>
@@ -242,6 +250,10 @@
                     urlComplete.subUrl === 'overtime') ||
                   (urlComplete.mainUrl === 'employees' &&
                     urlComplete.subUrl === 'employeelist') ||
+
+                    (urlComplete.mainUrl === 'employees' &&
+                    urlComplete.subUrl === 'demo') ||
+
                   urlComplete.mainUrl === 'scheduling' ||
                   urlComplete.mainUrl === 'shift'
                     ? 'block'
@@ -347,6 +359,13 @@
                   href="javascript:"
                   [ngClass]="{ active: urlComplete.subUrl === 'overtime' }"
                   >Overtime</a
+                >
+              </li>
+              <li routerLink="/layout/employees/demo">
+                <a
+                  href="javascript:"
+                  [ngClass]="{ active: urlComplete.subUrl === 'demo' }"
+                  >Demo</a
                 >
               </li>
             </ul>

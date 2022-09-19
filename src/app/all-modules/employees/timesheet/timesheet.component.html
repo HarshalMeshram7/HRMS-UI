@@ -51,7 +51,7 @@
                             </td>
                             <td class="text-center">{{item.assignedhours}}</td>
                             <td class="text-center">{{item.hrs}}</td>
-                            <td class="d-none d-sm-table-cell col-md-4">{{item.description}}</td>
+                            <td class="d-none d-sm-table-cell col-md-4" >{{item.description}}</td>
                             <td class="text-end">
                                 <div class="dropdown dropdown-action">
                                     <a  class="action-icon dropdown-toggle" data-bs-toggle="dropdown"
@@ -93,10 +93,10 @@
                             <select class="form-select form-control"
                                 [class.invalid]="addTimesheetForm.get('Project').invalid && addTimesheetForm.get('Project').touched"
                                 formControlName="Project">
-                                <option>Office Management</option>
-                                <option>Project Management</option>
-                                <option>Video Calling App</option>
-                                <option>Hospital Administration</option>
+                                <option>PMS</option>
+                                <option>HRMS</option>
+                                <option>SAMS</option>
+                                <option>PECKHAM</option>
                             </select>
                             <div
                                 *ngIf="addTimesheetForm.get('Project').invalid && addTimesheetForm.get('Project').touched">
@@ -105,9 +105,25 @@
                                     class="text-danger"> *Project is required</small>
                             </div>
                         </div>
+                        <div class="form-group col-sm-6">
+                            <label>Date <span class="text-danger">*</span></label>
+                            <div class="cal-icon">
+                                <input class="form-control datetimepicker" type="text" bsDatepicker type="text"
+                                    [bsConfig]="{ dateInputFormat: 'DD-MM-YYYY',  returnFocusToInput: true }"
+                                    [class.invalid]="addTimesheetForm.get('TimeDate').invalid && addTimesheetForm.get('TimeDate').touched"
+                                    formControlName="TimeDate">
+                                <div
+                                    *ngIf="addTimesheetForm.get('TimeDate').invalid && addTimesheetForm.get('TimeDate').touched">
+                                    <small
+                                        *ngIf="addTimesheetForm.get('TimeDate').invalid && addTimesheetForm.get('TimeDate').touched"
+                                        class="text-danger"> *Date is required</small>
+                                </div>
+                            </div>
+                        </div>
+                        
                     </div>
 
-                    <div class="row">
+                     <!-- <div class="row">
                         <div class="form-group col-sm-4">
                             <label>Deadline <span class="text-danger">*</span></label>
                             <div class="cal-icon">
@@ -129,25 +145,12 @@
                                 [class.invalid]="addTimesheetForm.get('remainingHours').invalid && addTimesheetForm.get('remainingHours').touched"
                                 formControlName="remainingHours">
                         </div>
-                    </div>
+                    </div>  -->
+
+
                     <div class="row">
                         <div class="form-group col-sm-6">
-                            <label>Date <span class="text-danger">*</span></label>
-                            <div class="cal-icon">
-                                <input class="form-control datetimepicker" type="text" bsDatepicker type="text"
-                                    [bsConfig]="{ dateInputFormat: 'DD-MM-YYYY',  returnFocusToInput: true }"
-                                    [class.invalid]="addTimesheetForm.get('TimeDate').invalid && addTimesheetForm.get('TimeDate').touched"
-                                    formControlName="TimeDate">
-                                <div
-                                    *ngIf="addTimesheetForm.get('TimeDate').invalid && addTimesheetForm.get('TimeDate').touched">
-                                    <small
-                                        *ngIf="addTimesheetForm.get('TimeDate').invalid && addTimesheetForm.get('TimeDate').touched"
-                                        class="text-danger"> *Date is required</small>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="form-group col-sm-6">
-                            <label>Hours <span class="text-danger">*</span></label>
+                            <label>Total Working Hours <span class="text-danger">*</span></label>
                             <input class="form-control" type="text" value="9"
                                 [class.invalid]="addTimesheetForm.get('Hrs').invalid && addTimesheetForm.get('Hrs').touched"
                                 formControlName="Hrs">
@@ -156,6 +159,12 @@
                                     *ngIf="addTimesheetForm.get('Hrs').invalid && addTimesheetForm.get('Hrs').touched"
                                     class="text-danger"> *Hrs is required</small>
                             </div>
+                        </div>
+                        <div class="form-group col-sm-6">
+                            <label>Remaining Hours <span class="text-danger">*</span></label>
+                            <input class="form-control" type="text"
+                                [class.invalid]="addTimesheetForm.get('remainingHours').invalid && addTimesheetForm.get('remainingHours').touched"
+                                formControlName="remainingHours">
                         </div>
                     </div>
                     <div class="form-group">
@@ -171,6 +180,7 @@
                                 class="text-danger"> *Description is required</small>
                         </div>
                     </div>
+
                     <div class="submit-section">
                         <button class="btn btn-primary submit-btn">Submit</button>
                     </div>
@@ -210,6 +220,7 @@
                                     *ngIf="editTimesheetForm.get('Project').invalid && editTimesheetForm.get('Project').touched"
                                     class="text-danger"> *Project is required</small>
                             </div>
+
                         </div>
                     </div>
                     <div class="row">

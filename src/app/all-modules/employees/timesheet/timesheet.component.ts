@@ -13,7 +13,6 @@ declare const $: any;
 })
 export class TimesheetComponent implements OnInit {
   lstTimesheet: any[];
-
   @ViewChild(DataTableDirective, { static: false })
   public dtElement: DataTableDirective;
   public dtOptions: DataTables.Settings = {};
@@ -210,5 +209,5 @@ export class TimesheetComponent implements OnInit {
   ngOnDestroy(): void {
     // Do not forget to unsubscribe the event
     this.dtTrigger.unsubscribe();
-  }
+  }  
 }
