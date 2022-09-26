@@ -14,7 +14,7 @@ import { DepartmentsComponent } from './departments/departments.component';
 import { DesignationComponent } from './designation/designation.component';
 import { TimesheetComponent } from './timesheet/timesheet.component';
 import { OvertimeComponent } from './overtime/overtime.component';
-// import { DemoComponent } from './demo/demo.component';
+
 const routes: Routes = [
   {
     path: '',
@@ -24,58 +24,55 @@ const routes: Routes = [
         path: 'employeepage',
         component: EmployeePageContentComponent
       },
-      {
-        path: 'employeelist',
-        component: EmployeeListComponent
-      },
+      // {
+      //   path: 'employeelist',
+      //   component: EmployeeListComponent
+      // },
       {
         path: 'employeeprofile',
         component: EmployeeProfileComponent
       },
-      {
-        path: 'holidays',
-        component: HolidaysComponent
-      },
-      {
-        path: 'adminleaves',
-        component: LeavesAdminComponent
-      },
+      // {
+      //   path: 'holidays',
+      //   component: HolidaysComponent
+      // },
+      // {
+      //   path: 'adminleaves',
+      //   component: LeavesAdminComponent
+      // },
       {
         path: 'employeeleaves',
         component: LeavesEmployeeComponent
       },
-      {
-        path: 'leavesettings',
-        component: LeaveSettingsComponent
-      },
-      {
-        path: 'attendanceadmin',
-        component: AttendanceAdminComponent
-      },
-      {
-        path: 'attendanceemployee',
-        component: AttendanceEmployeeComponent
-      },
-      {
-        path: 'departments',
-        component: DepartmentsComponent
-      },
-      {
-        path: 'designation',
-        component: DesignationComponent
-      },
+      // {
+      //   path: 'leavesettings',
+      //   component: LeaveSettingsComponent
+      // },
+      // {
+      //   path: 'attendanceadmin',
+      //   component: AttendanceAdminComponent
+      // },
+      // {
+      //   path: 'attendanceemployee',
+      //   component: AttendanceEmployeeComponent
+      // },
+      // {
+      //   path: 'departments',
+      //   component: DepartmentsComponent
+      // },
+      // {
+      //   path: 'designation',
+      //   component: DesignationComponent
+      // },
       {
         path: 'timesheet',
         component: TimesheetComponent
       },
-      {
-        path: 'overtime',
-        component: OvertimeComponent
-      },
       // {
-      //   path: 'demo',
-      //   component: DemoComponent
+      //   path: 'overtime',
+      //   component: OvertimeComponent
       // },
+     
 
     ]
   }

@@ -1,26 +1,37 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { PerformanceComponent } from './performance.component';
-import { PerformanceIndicatorComponent } from './performance-indicator/performance-indicator.component';
 import { PerformanceReviewComponent } from './performance-review/performance-review.component';
-import { PerformanceAppraisalComponent } from './performance-appraisal/performance-appraisal.component';
+import { PerformanceCoreComponent } from './performance-core/performance-core.component';
+import { PerformanceFeedbackComponent } from './performance-feedback/performance-feedback.component';
+import { PerformanceSkillsComponent } from './performance-skills/performance-skills.component';
+import { PerformanceObjectiveComponent } from './performance-objective/performance-objective.component';
 const routes: Routes = [
   {
     path: "",
     component: PerformanceComponent,
     children: [
       {
-        path: "performanceindicator",
-        component: PerformanceIndicatorComponent
-      },
-      {
         path: "performancereview",
         component: PerformanceReviewComponent
       },
       {
-        path: "performanceappraisal",
-        component: PerformanceAppraisalComponent
+        path: "performanceobjective",
+        component: PerformanceObjectiveComponent
+      },
+      {
+        path: "performancecore",
+        component: PerformanceCoreComponent
+      },
+      {
+        path: "performancefeedback",
+        component: PerformanceFeedbackComponent
+      },
+      {
+        path: "performanceskills",
+        component: PerformanceSkillsComponent
       }
+    
     ]
   }
 ];
