@@ -10,9 +10,13 @@ import { PerformanceAppraisalComponent } from './performance-appraisal/performan
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { BsDatepickerModule } from 'ngx-bootstrap';
 import { SharingModule } from 'src/app/sharing/sharing.module';
+import { PerformanceCoreComponent } from './performance-core/performance-core.component';
+import { PerformanceFeedbackComponent } from './performance-feedback/performance-feedback.component';
+import { PerformanceMeetingComponent } from './performance-meeting/performance-meeting.component';
+import { PerformanceSkillsComponent } from './performance-skills/performance-skills.component';
 
 @NgModule({
-  declarations: [PerformanceComponent, PerformanceIndicatorComponent, PerformanceReviewComponent, PerformanceAppraisalComponent],
+  declarations: [PerformanceComponent, PerformanceIndicatorComponent, PerformanceReviewComponent, PerformanceAppraisalComponent, PerformanceCoreComponent, PerformanceFeedbackComponent, PerformanceMeetingComponent, PerformanceSkillsComponent],
   imports: [
     CommonModule,
     PerformanceRoutingModule,

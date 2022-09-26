@@ -15,6 +15,7 @@
               href="javascript:"
               [ngClass]="{ subdrop: urlComplete.mainUrl === 'dashboard' }"
             >
+
               <i class="la la-dashboard"></i>
               <span>Dashboard</span>
               <span class="menu-arrow"></span>
@@ -359,13 +360,6 @@
                   href="javascript:"
                   [ngClass]="{ active: urlComplete.subUrl === 'overtime' }"
                   >Overtime</a
-                >
-              </li>
-              <li routerLink="/layout/employees/demo">
-                <a
-                  href="javascript:"
-                  [ngClass]="{ active: urlComplete.subUrl === 'demo' }"
-                  >Demo</a
                 >
               </li>
             </ul>
@@ -815,7 +809,7 @@
                   href="javascript:"
                   [ngClass]="{ active: urlComplete.subUrl === 'daily-reports' }"
                 >
-                  Daily Report
+                 Daily Report
                 </a>
               </li>
             </ul>
@@ -840,7 +834,64 @@
                   urlComplete.mainUrl === 'performance' ? 'block' : 'none'
               }"
             >
-              <li routerLink="/layout/performance/performanceindicator">
+            <li routerLink="/layout/performance/performancereview">
+              <a
+                href="javascript:"
+                [ngClass]="{
+                  active: urlComplete.subUrl === 'performancereview'
+                }"
+              >
+                Performance Review
+              </a>
+            </li>
+
+
+            <li routerLink="/layout/performance/performanceobjective">
+              <a
+                href="javascript:"
+                [ngClass]="{
+                  active: urlComplete.subUrl === 'performanceobjective'
+                }"
+              >
+                Performance Objective
+              </a>
+            </li>
+
+            <li routerLink="/layout/performance/performancecore">
+              <a
+                href="javascript:"
+                [ngClass]="{
+                  active: urlComplete.subUrl === 'performancecore'
+                }"
+              >
+                Performance Core
+              </a>
+            </li>
+
+            <li routerLink="/layout/performance/performancefeedback">
+              <a
+                href="javascript:"
+                [ngClass]="{
+                  active: urlComplete.subUrl === 'performancefeedback'
+                }"
+              >
+                Performance Feedback
+              </a>
+            </li>
+
+            <li routerLink="/layout/performance/performanceskills">
+              <a
+                href="javascript:"
+                [ngClass]="{
+                  active: urlComplete.subUrl === 'performanceskills'
+                }"
+              >
+                Performance Skills
+              </a>
+            </li>
+
+
+              <!-- <li routerLink="/layout/performance/performanceindicator">
                 <a
                   href="javascript:"
                   [ngClass]="{
@@ -848,16 +899,6 @@
                   }"
                 >
                   Performance Indicator
-                </a>
-              </li>
-              <li routerLink="/layout/performance/performancereview">
-                <a
-                  href="javascript:"
-                  [ngClass]="{
-                    active: urlComplete.subUrl === 'performancereview'
-                  }"
-                >
-                  Performance Review
                 </a>
               </li>
               <li routerLink="/layout/performance/performanceappraisal">
@@ -869,7 +910,10 @@
                 >
                   Performance Appraisal
                 </a>
-              </li>
+              </li> -->
+
+            
+
             </ul>
           </li>
           <li
@@ -960,7 +1004,7 @@
             >
           </li>
           <li [ngClass]="{ active: urlComplete.subUrl === 'terminationmain' }">
-            <a routerLink="/layout/termination/terminationmain"
+            <a routerLink="/layout/ter  mination/terminationmain"
               ><i class="la la-times-circle"></i> <span>Termination</span></a
             >
           </li>
