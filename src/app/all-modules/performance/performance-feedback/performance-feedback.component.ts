@@ -1,3 +1,4 @@
+import { DatePipe } from '@angular/common';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -7,9 +8,8 @@ import { Component, OnInit } from '@angular/core';
 })
 export class PerformanceFeedbackComponent implements OnInit {
 
-  constructor() { }
-
   ngOnInit(): void {
   }
-
+  
+  todayString : string = new Date().toDateString();
 }

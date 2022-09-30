@@ -6,6 +6,7 @@ import { PerformanceCoreComponent } from './performance-core/performance-core.co
 import { PerformanceFeedbackComponent } from './performance-feedback/performance-feedback.component';
 import { PerformanceSkillsComponent } from './performance-skills/performance-skills.component';
 import { PerformanceObjectiveComponent } from './performance-objective/performance-objective.component';
+import { MeetingComponent } from './meeting/meeting.component';
 const routes: Routes = [
   {
     path: "",
@@ -30,6 +31,10 @@ const routes: Routes = [
       {
         path: "performanceskills",
         component: PerformanceSkillsComponent
+      },
+      {
+        path: "meeting",
+        component: MeetingComponent
       }
     
     ]

@@ -1,1 +1,144 @@
-<p>performance-skills works!</p>
+<div class="content container-fluid">
+  <!-- Page Header -->
+  <div class="page-header">
+    <div class="row align-items-center">
+      <div class="col">
+        <h3 class="page-title">Your Skills</h3>
+        <ul class="breadcrumb">
+          <li class="breadcrumb-item">
+            <a routerLink="/layout/dashboard/admin">Dashboard</a>
+          </li>
+          <li class="breadcrumb-item active">Skills</li>
+        </ul>
+      </div>
+      <!-- <div class="col-auto float-end ms-auto">
+        <a
+          class="btn add-btn"
+          data-bs-toggle="modal"
+          data-bs-target="#add_indicator"
+          ><i class="fa fa-plus"></i> Add Skills</a>
+      </div> -->
+    </div>
+  </div>
+  <!-- /Page Header -->
+
+  <!-- Tabs -->
+  <div class="col-md-12">
+    <div class="card">
+      <div class="card-body">
+        <ul class="nav nav-tabs nav-tabs-bottom nav-justified">
+          <li class="nav-item">
+            <a
+              class="nav-link active"
+              href="#bottom-justified-tab1"
+              data-bs-toggle="tab"
+              >Skills
+            </a>
+          </li>
+          <li class="nav-item">
+            <a
+              class="nav-link"
+              href="#bottom-justified-tab2"
+              data-bs-toggle="tab"
+              >Update Your Skills</a
+            >
+          </li>
+        </ul>
+        <div class="tab-content">
+
+          <div class="tab-pane show active col-md-12" id="bottom-justified-tab1">
+            <div class="form-group row">
+                                <form [formGroup]="invoiceForm" >
+                                    <table  class="table-responsive ">
+                                        <thead class="col-md-12 " >
+                                            <th class="col-md-2">Id</th>
+                                            <th class="col-md-6">Name</th>
+                                            <!-- <th class="position">Action</th> -->
+                                        </thead>
+                                        <tbody formArrayName="Rows">
+                                            <tr *ngFor="let itemrow of invoiceForm.controls.Rows.controls; let i=index;let l=last"
+                                                [formGroupName]="i">
+                                                <td>{{i+1}}</td>
+                                                <td >
+                                                    <input formControlName="name" class="form-control">
+                                        </td>
+                                                <td class="p-2">
+                                                    <button *ngIf="invoiceForm.controls.Rows.controls.length > 1" (click)="deleteRow(i)" class="btn btn-danger position">Delete</button>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </form>
+                                <a class="btn add-btn mt-3 col-md-1 mx-auto" (click)="addNewRow()"><i class="fa fa-plus"></i> Add Skills</a>     
+            </div>
+          </div>
+
+
+          <div class="tab-pane show " id="bottom-justified-tab2">
+            <div class="form-group row">
+                <form [formGroup]="invoiceForm" >
+                    <table  class="table-responsive ">
+                        <thead class="col-md-12 " >
+                            <th class="col-md-2">Id</th>
+                            <th class="col-md-6">Name</th>
+                            <!-- <th class="position">Action</th> -->
+                        </thead>
+                        <tbody formArrayName="Rows">
+                            <tr *ngFor="let itemrow of invoiceForm.controls.Rows.controls; let i=index;let l=last"
+                                [formGroupName]="i">
+                                <td>{{i+1}}</td>
+                                <td >
+                                    <input formControlName="name" class="form-control">
+                        </td>
+                                <td class="p-2">
+                                    <button *ngIf="invoiceForm.controls.Rows.controls.length > 1" (click)="deleteRow(i)" class="btn btn-danger position">Delete</button>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </form>
+                <a class="btn add-btn mt-3 col-md-1 mx-auto" (click)="addNewRow()"><i class="fa fa-plus"></i> Update </a>     
+</div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- /Tabs -->
+
+  <!-- <modal-contain> -->
+
+  <div id="add_indicator" class="modal custom-modal fade" role="dialog">
+    <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title">Add New Skill</h5>
+          <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <form (ngSubmit)="addIndicator()" [formGroup]="addIndicatorForm">
+            <div class="row">
+                  <div class="form-group row ">
+                  <label class="col-form-label">Skill Name</label>
+                    <input type="text" class="form-control col-md-4" formControlName="txt">
+              </div>
+            </div>
+            <div class="submit-section">
+              <button class="btn btn-primary submit-btn">Submit</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- </modal-contain> -->
+
+  <!-- update skills -->
+  
+  <!-- /update skills -->
+  
+</div>
