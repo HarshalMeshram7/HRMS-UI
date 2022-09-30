@@ -14,9 +14,10 @@ import { PerformanceCoreComponent } from './performance-core/performance-core.co
 import { PerformanceFeedbackComponent } from './performance-feedback/performance-feedback.component';
 import { PerformanceMeetingComponent } from './performance-meeting/performance-meeting.component';
 import { PerformanceSkillsComponent } from './performance-skills/performance-skills.component';
+import { MeetingComponent } from './meeting/meeting.component';
 
 @NgModule({
-  declarations: [PerformanceComponent, PerformanceIndicatorComponent, PerformanceReviewComponent, PerformanceAppraisalComponent, PerformanceCoreComponent, PerformanceFeedbackComponent, PerformanceMeetingComponent, PerformanceSkillsComponent],
+  declarations: [PerformanceComponent, PerformanceIndicatorComponent, PerformanceReviewComponent, PerformanceAppraisalComponent, PerformanceCoreComponent, PerformanceFeedbackComponent, PerformanceMeetingComponent, PerformanceSkillsComponent, MeetingComponent],
   imports: [
     CommonModule,
     PerformanceRoutingModule,

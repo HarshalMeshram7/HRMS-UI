@@ -9,11 +9,11 @@
                 <li class="breadcrumb-item"><a routerLink="/layout/dashboard/admin">Dashboard</a></li>
                 <li class="breadcrumb-item active">Feedback</li>
             </ul>
-        </div>
-        <div class="col-auto float-end ms-auto">
+        </div> 
+        <!-- <div class="col-auto float-end ms-auto">
             <a  class="btn add-btn" data-bs-toggle="modal" data-bs-target="#add_indicator"><i
                     class="fa fa-plus"></i> Add Feedback</a>
-        </div>
+        </div> -->
     </div>
     </div>
 <!-- /Page Header -->
@@ -36,27 +36,53 @@
             </ul>
             <div class="tab-content">
                 <div class="tab-pane show active" id="bottom-justified-tab1">
-                    Tab content 1
+                    <div class="form-group row">
+                        <span class="text-muted">This section will show praise received by you</span> <br><br>
+                        <textarea readonly >ccusamus id corrupti lionsecluptates, dignissimos exercitationem iusto distinctio labore! Fuga.</textarea>
+                        <span class="text-muted text-end"><p>- Riddhi Kalambe {{todayString | date}}</p></span>
+                    </div>
                 </div>
+
                 <div class="tab-pane" id="bottom-justified-tab2">
-                    Tab content 2
+                    <div class="form-group row">
+                        <span class="text-muted">This section will show feedback received by you</span> <br><br>
+                        <textarea readonly >ccusamus id corrupti lionsecluptates, dignissimos exercitationem iusto distinctio labore! Fuga.</textarea>
+                        <span class="text-muted text-end"><p>- Riddhi Kalambe {{todayString | date}}</p></span>
+                    </div>
                 </div>
+
                 <div class="tab-pane" id="bottom-justified-tab3">
-                    Tab content 3
-                </div>
+                    <div class="form-group row">
+                        <span class="text-muted">This section will show feedback given by you</span> <br><br>
+                        <textarea readonly >ccusamus id corrupti lionsecluptates, dignissimos exercitationem iusto distinctio labore! Fuga.</textarea>
+                        <span class="text-muted text-end"><p>- User1 {{todayString | date}}</p></span> <br> <br>
+
+                        <textarea readonly >ccusamus id corrupti lionsecluptates, dignissimos exercitationem iusto distinctio labore! Fuga.</textarea>
+                        <span class="text-muted text-end"><p>- User2 {{todayString | date}}</p></span> <br> <br>
+
+                        <textarea readonly >ccusamus id corrupti lionsecluptates, dignissimos exercitationem iusto distinctio labore! Fuga.</textarea>
+                        <span class="text-muted text-end"><p>- User3 {{todayString | date}}</p></span> <br> <br>
+
+                        <textarea readonly >ccusamus id corrupti lionsecluptates, dignissimos exercitationem iusto distinctio labore! Fuga.</textarea>
+                        <span class="text-muted text-end"><p>- User4 {{todayString | date}}</p></span> <br>
+                    </div>
+                </div> 
+
                 <div class="tab-pane" id="bottom-justified-tab4">
                     Tab content 4
                 </div>
             </div>
         </div>
+
+        <!-- SUBMIT BUTTON -->
+        <!-- <div class="submit-section">
+            <button class="btn btn-primary submit-btn" type="submit">Submit</button>
+        </div> -->
+        <!-- SUBMIT BUTTON -->
+
     </div>
 </div>
 <!-- /tabs -->
-
-
-
-
-
 
  </div>
 
