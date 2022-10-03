@@ -67,7 +67,7 @@ export class DepartmentsComponent implements OnInit, OnDestroy {
       this.srch = [...this.rows];
     });
   }
-
+          
   // Add Department  Modal Api Call
   addDepartment() {
     if(this.addDepartmentForm.invalid){

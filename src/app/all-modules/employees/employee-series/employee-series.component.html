@@ -1,0 +1,70 @@
+<!-- Page Content -->
+<div class="content container-fluid">
+
+    <!-- Page Header -->
+    <div class="page-header">
+        <div class="row align-items-center">
+            <div class="col">
+                <h3 class="page-title">Employee Series</h3>
+                <ul class="breadcrumb">  
+                    <li class="breadcrumb-item"><a routerLink="/layout/dashboard/admin">Dashboard</a></li>
+                    <li class="breadcrumb-item active">Employee Series</li>
+                </ul>
+            </div>
+            <div class="col-auto float-end ms-auto">
+                <a  class="btn add-btn" data-bs-toggle="modal" data-bs-target="#add_department"><i
+                        class="fa fa-search"></i>Search</a>
+            </div>
+        </div>
+    </div>
+    <!-- /Page Header -->
+
+
+    <div class="col-lg-12">
+        <div class="card">
+            <div class="card-body">
+                <div class="table-responsive">
+                    <table class="table table-striped mb-0">
+                        <thead>
+                            <tr>
+                                <th>Series Name</th>
+                                <th>Prefix</th>
+                                <th>Suffix</th>
+                                <th>Next Number</th>
+                                <th>Status</th>
+                                <th class="text-end">Actions</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                           <tr *ngFor="let x of series; let i = index">
+                            <td>{{x.series_Name}}</td>
+                            <td>{{x.prefix}}</td>
+                            <td>{{x.suffix}}</td>
+                            <td>{{x.next_Number}}</td>
+                            <td>{{x.status}}</td>
+                            <td class="text-end">
+                                <div class="dropdown dropdown-action">
+                                    <a  class="action-icon dropdown-toggle" data-bs-toggle="dropdown"
+                                        aria-expanded="false"><i class="material-icons">more_vert</i></a>
+                                    <div class="dropdown-menu dropdown-menu-right">
+                                        <a class="dropdown-item"  data-bs-toggle="modal"
+                                            data-bs-target="#edit_department" (click)="edit(x.next_Number)"><i
+                                                class="fa fa-pencil m-r-5"></i> Edit</a>
+                                        <a class="dropdown-item"  data-bs-toggle="modal"
+                                            data-bs-target="#delete_department" (click)="tempId = item.id"><i
+                                                class="fa fa-trash-o m-r-5"></i>
+                                            Delete</a>
+                                    </div>
+                                </div>
+                            </td>
+                           </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+</div>
