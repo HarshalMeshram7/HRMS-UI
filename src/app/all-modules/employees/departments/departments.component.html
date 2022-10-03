@@ -6,14 +6,14 @@
         <div class="row align-items-center">
             <div class="col">
                 <h3 class="page-title">Department</h3>
-                <ul class="breadcrumb">
+                <ul class="breadcrumb">  
                     <li class="breadcrumb-item"><a routerLink="/layout/dashboard/admin">Dashboard</a></li>
                     <li class="breadcrumb-item active">Department</li>
                 </ul>
             </div>
             <div class="col-auto float-end ms-auto">
                 <a  class="btn add-btn" data-bs-toggle="modal" data-bs-target="#add_department"><i
-                        class="fa fa-plus"></i> Add Department</a>
+                        class="fa fa-plus"></i>Job Title</a>
             </div>
         </div>
     </div>
@@ -29,7 +29,7 @@
                     <thead>
                         <tr>
                             <th style="width: 30px;">#</th>
-                            <th>Department Name</th>
+                            <th>Job Title</th>
                             <th class="text-end">Action</th>
                         </tr>
                     </thead>
@@ -66,7 +66,7 @@
     <div class="modal-dialog modal-dialog-centered" role="document">
         <div class="modal-content">
             <div class="modal-header">
-                <h5 class="modal-title">Add Department</h5>
+                <h5 class="modal-title">Add Job Title</h5>
                 <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close">
                     <span aria-hidden="true">&times;</span>
                 </button>
@@ -76,7 +76,7 @@
                 <form (ngSubmit)="addDepartment()" [formGroup]="addDepartmentForm">
                     <div class="form-group">
                         <label>Department Name <span class="text-danger">*</span></label>
-                        <input class="form-control" type="text"
+                        <input class="form-control" type="text" id="mydepart"
                             [class.invalid]="addDepartmentForm.get('DepartmentName').invalid && addDepartmentForm.get('DepartmentName').touched"
                             formControlName="DepartmentName">
                         <div

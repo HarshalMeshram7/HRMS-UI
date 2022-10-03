@@ -362,6 +362,28 @@
                   >Overtime</a
                 >
               </li>
+              <li routerLink="/layout/employees/series">
+                <a
+                  href="javascript:"
+                  [ngClass]="{ active: urlComplete.subUrl === 'series' }"
+                  >Employee Series</a>
+              </li>
+
+              <li routerLink="/layout/employees/company-setup">
+                <a
+                  href="javascript:"
+                  [ngClass]="{ active: urlComplete.subUrl === 'company-setup' }"
+                  >Company Setup</a>
+              </li>
+
+              <li routerLink="/layout/employees/legal-entities">
+                <a
+                  href="javascript:"
+                  [ngClass]="{ active: urlComplete.subUrl === 'legal-entities' }"
+                  >Legal Entities</a>
+              </li>
+
+              
             </ul>
           </li>
           <li
