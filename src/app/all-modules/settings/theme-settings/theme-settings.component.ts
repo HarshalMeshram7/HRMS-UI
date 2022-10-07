@@ -21,7 +21,7 @@ export class ThemeSettingsComponent implements OnInit {
 
   ngOnInit() {
     this.themeSettings = this.formBuilder.group({
-      websiteName: ["Dreamguy's Technologies", [Validators.required]],
+      websiteName: ["Pixonix Technologies", [Validators.required]],
       lightLogo: [""],
       favicon: [""],
     });

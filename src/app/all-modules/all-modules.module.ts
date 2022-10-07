@@ -21,6 +21,7 @@ import { AllModulesService } from './all-modules.service';
 
 // Api All Modules Database
 import { AllModulesData } from 'src/assets/all-modules-data/all-modules-data';
+import { OrganizationComponent } from './organization/organization.component';
 
 
 
@@ -31,6 +32,7 @@ const DEFAULT_PERFECT_SCROLLBAR_CONFIG: PerfectScrollbarConfigInterface = {};
     AllModulesComponent,
     HeaderComponent,
     SidebarComponent,
+    OrganizationComponent,
   
 
 
