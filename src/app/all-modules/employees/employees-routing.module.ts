@@ -17,6 +17,7 @@ import { OvertimeComponent } from './overtime/overtime.component';
 import { EmployeeSeriesComponent } from './employee-series/employee-series.component';
 import { CompanySetupComponent } from './company-setup/company-setup.component';
 import { LegalEntitiesComponent } from './legal-entities/legal-entities.component';
+import { BusinessUnitComponent } from './business-unit/business-unit.component';
 
 const routes: Routes = [
   {
@@ -86,6 +87,10 @@ const routes: Routes = [
      {
       path: 'legal-entities',
       component: LegalEntitiesComponent
+     },
+     {
+      path: 'businessUnit',
+      component: BusinessUnitComponent
      }
 
     ]

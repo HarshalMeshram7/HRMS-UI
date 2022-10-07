@@ -8,9 +8,11 @@ import { AppComponent } from './app.component';
 // Bootstrap DataTable
 import { DataTablesModule } from 'angular-datatables';
 import { ToastrModule } from 'ngx-toastr';
+import { EmployeesComponent } from './src/app/all-modules/employees/employees.component';
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    EmployeesComponent
   ],
   imports: [
     BrowserModule,
