@@ -361,6 +361,14 @@ const routes: Routes = [
           ),
       },
       {
+        path: "organization",
+        loadChildren: () =>
+          import("./organization/organization.module").then(
+            (m) => m.OrganizationModule
+          ),
+      },
+
+      {
         path: "archivedjobs",
         loadChildren: () =>
           import("./archivedjobs/archivedjobs.module").then(

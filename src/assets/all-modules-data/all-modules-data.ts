@@ -774,7 +774,7 @@ export class AllModulesData implements InMemoryDbService {
     let departments = [
       {
         id: 1,
-        departmentName: "Web Development",
+        departmentName: "Web Development Pixonix",
       },
       {
         id: 2,
@@ -797,6 +797,52 @@ export class AllModulesData implements InMemoryDbService {
         departmentName: "Marketing",
       },
     ];
+
+    let businessUnit = [
+      {
+        id: 1,
+        bname:'Web Development',
+        bhead:'john',
+        head:'john',
+        des: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi, ex?',
+        status:'active',
+        empno: '50'
+      },
+      {
+        id: 2,
+        bname:'Web Development',
+        bhead:'john',
+        des: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi, ex?',
+        status:'active',
+        empno: '50'
+      },
+      {
+        id: 3,
+        bname:'Web Development',
+        bhead:'john',
+        des: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi, ex?',
+        status:'active',
+        empno: '50'
+      },
+      {
+        id: 4,
+        bname:'Web Development',
+        bhead:'john',
+        des: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi, ex?',
+        status:'active',
+        empno: '50'
+      },
+      {
+        id: 5,
+        bname:'Web Development',
+        bhead:'john',
+        des: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi, ex?',
+        status:'active',
+        empno: '50'
+      },
+     
+    ];
+
     let designation = [
       {
         id: 1,
@@ -1424,44 +1470,44 @@ export class AllModulesData implements InMemoryDbService {
     let appliedCandidates = [
       {
         name: "	John Doe",
+        job_title: "Developer",
         email: "johndoe@example.com",
-        phone: "9876543210",
-        applyDate: "9 Feb 2019",
+        applyDate: "9 Feb 20122",
         id: 1,
       },
       {
         name: "Arnold",
+        job_title: "Developer",
         email: "arnold@example.com",
-        phone: "9872543210",
-        applyDate: "25 Mar 2019",
+        applyDate: "25 Mar 2022",
         id: 2,
       },
       {
         name: "kenneth",
+        job_title: "Developer",
         email: "kenneth@example.com",
-        phone: "9876543230",
-        applyDate: "13 Feb 2019",
+        applyDate: "13 Feb 2022",
         id: 3,
       },
       {
         name: "Sam",
+        job_title: "Developer",
         email: "sam@example.com",
-        phone: "9876543297",
-        applyDate: "25 Jan 2019",
+        applyDate: "25 Jan 2022",
         id: 4,
       },
       {
         name: "Michellin",
+        job_title: "Developer",
         email: "michellin@example.com",
-        phone: "9876524210",
-        applyDate: "26 Feb 2019",
+        applyDate: "26 Feb 2022",
         id: 5,
       },
       {
         name: "john Mckensey",
+        job_title: "Developer",
         email: "john@example.com",
-        phone: "9876543410",
-        applyDate: "18 Jun 2019",
+        applyDate: "18 Jun 2022",
         id: 6,
       },
     ];
@@ -4251,6 +4297,7 @@ export class AllModulesData implements InMemoryDbService {
       tickets: tickets,
       employeeleaves: employeeleaves,
       departments: departments,
+      businessUnit:businessUnit,
       designation: designation,
       timesheet: timesheet,
       overtime: overtime,

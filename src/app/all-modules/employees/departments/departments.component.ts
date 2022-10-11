@@ -30,11 +30,11 @@ export class DepartmentsComponent implements OnInit, OnDestroy {
   ) {}
 
   ngOnInit() {
-    this.dtOptions = {
-      // ... skipped ...
-      pageLength: 10,
-      dom: "lrtip",
-    };
+    // this.dtOptions = {
+    //   // ... skipped ...
+    //   pageLength: 10,
+    //   dom: "lrtip",
+    // };
     this.LoadDepartment();
 
     this.addDepartmentForm = this.formBuilder.group({

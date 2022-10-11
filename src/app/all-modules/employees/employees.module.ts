@@ -25,9 +25,10 @@ import { PickListModule } from 'primeng/picklist';
 import { EmployeeSeriesComponent } from './employee-series/employee-series.component';
 import { CompanySetupComponent } from './company-setup/company-setup.component';
 import { LegalEntitiesComponent } from './legal-entities/legal-entities.component';
-import { BusinessUnitComponent } from './business-unit/business-unit.component';
+import { BusinessUnitComponent } from '../organization/business-unit/business-unit.component';
+import { HiringOffersComponent } from './hiring-offers/hiring-offers.component';
 @NgModule({
-  declarations: [EmployeesComponent, AllEmployeesComponent, EmployeePageContentComponent, EmployeeListComponent, EmployeeProfileComponent, HolidaysComponent, LeavesAdminComponent, LeavesEmployeeComponent, LeaveSettingsComponent, AttendanceAdminComponent, AttendanceEmployeeComponent, DepartmentsComponent, DesignationComponent, TimesheetComponent, OvertimeComponent, EmployeeSeriesComponent, CompanySetupComponent, LegalEntitiesComponent, BusinessUnitComponent],
+  declarations: [EmployeesComponent, AllEmployeesComponent, EmployeePageContentComponent, EmployeeListComponent, EmployeeProfileComponent, HolidaysComponent, LeavesAdminComponent, LeavesEmployeeComponent, LeaveSettingsComponent, AttendanceAdminComponent, AttendanceEmployeeComponent, DepartmentsComponent, DesignationComponent, TimesheetComponent, OvertimeComponent, EmployeeSeriesComponent, CompanySetupComponent, LegalEntitiesComponent, BusinessUnitComponent, HiringOffersComponent],
   imports: [
     CommonModule,
     FormsModule,
