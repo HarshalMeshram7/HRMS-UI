@@ -17,7 +17,8 @@ import { OvertimeComponent } from './overtime/overtime.component';
 import { EmployeeSeriesComponent } from './employee-series/employee-series.component';
 import { CompanySetupComponent } from './company-setup/company-setup.component';
 import { LegalEntitiesComponent } from './legal-entities/legal-entities.component';
-import { BusinessUnitComponent } from './business-unit/business-unit.component';
+import { BusinessUnitComponent } from '../organization/business-unit/business-unit.component';
+import { HiringOffersComponent } from './hiring-offers/hiring-offers.component';
 
 const routes: Routes = [
   {
@@ -91,6 +92,10 @@ const routes: Routes = [
      {
       path: 'businessUnit',
       component: BusinessUnitComponent
+     },
+     {
+      path: 'Hiring-offers',
+      component: HiringOffersComponent
      }
 
     ]
