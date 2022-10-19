@@ -1,0 +1,46 @@
+<!-- Page Content -->
+<div class="content container-fluid">
+
+    <!-- Page Header -->
+    <div class="page-header">
+        <div class="row">
+            <div class="col-sm-12">
+                <h3 class="page-title">Current Opening</h3>
+                <ul class="breadcrumb">
+                    <li class="breadcrumb-item"><a routerLink="/layout/dashboard/admin">Dashboard</a></li>
+                    <li class="breadcrumb-item active">Opening</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <!-- /Page Header -->
+
+    <!-- Content Starts -->
+    <div class="col-lg-12">
+        <div class="card">
+            <div class="card-body">
+                <div class="table-responsive">
+                
+                    <table class="table table-striped mb-0">
+                        <thead>
+                            <tr>
+                                <th><h4><i class="fa fa-briefcase" aria-hidden="true"></i> Job Title</h4></th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                           <tr *ngFor="let x of current_opning; let i = index">
+                            <td>{{x.job_title}} <br> <span class="text-muted"> {{x.job_details}}</span></td> <br>
+                           </tr> <br>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        
+    </div>
+    <!-- /Content End -->
+
+</div>
+<!-- /Page Content -->
+
+
+

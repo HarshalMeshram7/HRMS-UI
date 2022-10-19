@@ -19,6 +19,13 @@ import { CompanySetupComponent } from './company-setup/company-setup.component';
 import { LegalEntitiesComponent } from './legal-entities/legal-entities.component';
 import { BusinessUnitComponent } from '../organization/business-unit/business-unit.component';
 import { HiringOffersComponent } from './hiring-offers/hiring-offers.component';
+import { InPobationComponent } from './in-pobation/in-pobation.component';
+import { EvaluationInProgressComponent } from './evaluation-in-progress/evaluation-in-progress.component';
+import { CompletedProbationComponent } from './completed-probation/completed-probation.component';
+import { ProbationPolicyComponent } from './probation-policy/probation-policy.component';
+import { CurrentOpeningComponent } from './current-opening/current-opening.component';
+import { CandidateComponent } from '../candidate/candidate.component';
+import { CandidatessComponent } from './candidatess/candidatess.component';
 
 const routes: Routes = [
   {
@@ -96,7 +103,31 @@ const routes: Routes = [
      {
       path: 'Hiring-offers',
       component: HiringOffersComponent
-     }
+     },
+     {
+      path: 'inPobation',
+      component: InPobationComponent
+     },
+     {
+      path: 'inEvaluation',
+      component: EvaluationInProgressComponent
+     },
+     {
+      path: 'completedProbation',
+      component: CompletedProbationComponent
+     },
+     {
+      path: 'porbation-policy',
+      component: ProbationPolicyComponent
+     },
+     {
+      path: 'current-opening',
+      component: CurrentOpeningComponent
+     },
+    {
+      path: 'candidatess',
+      component: CandidatessComponent
+    }
 
     ]
   }

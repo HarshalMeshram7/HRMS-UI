@@ -460,9 +460,53 @@
                   >Hiring Offers</a>
               </li>
 
+              <li routerLink="/layout/employees/inPobation">
+                <a
+                  href="javascript:"
+                  [ngClass]="{ active: urlComplete.subUrl === 'inPobation' }"
+                  >In Pobation</a>
+              </li>
+
+              
+              <li routerLink="/layout/employees/inEvaluation">
+                <a
+                  href="javascript:"
+                  [ngClass]="{ active: urlComplete.subUrl === 'inEvaluation' }"
+                  >In Evaluation</a>
+              </li>
+
+              <li routerLink="/layout/employees/completedProbation">
+                <a
+                  href="javascript:"
+                  [ngClass]="{ active: urlComplete.subUrl === 'completedProbation' }"
+                  >Completed Probation</a>
+              </li>
+
+              <li routerLink="/layout/employees/porbation-policy">
+                <a
+                  href="javascript:"
+                  [ngClass]="{ active: urlComplete.subUrl === 'porbation-policy' }"
+                  >Porbation Policy</a>
+              </li>
+
+              <li routerLink="/layout/employees/current-opening">
+                <a
+                  href="javascript:"
+                  [ngClass]="{ active: urlComplete.subUrl === 'current-opening' }"
+                  >Current Opening</a>
+              </li>
+
+              <li routerLink="/layout/employees/candidatess">
+                <a
+                  href="javascript:"
+                  [ngClass]="{ active: urlComplete.subUrl === 'candidatess' }"
+                  >Candidates</a>
+              </li>
+
               
             </ul>
           </li>
+
           <li
             [ngClass]="{
               active:
@@ -1677,6 +1721,7 @@
               </li>
             </ul>
           </li>
+
           <li class="menu-title">
             <span>Extras</span>
           </li>
