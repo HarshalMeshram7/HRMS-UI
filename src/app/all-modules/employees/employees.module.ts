@@ -33,8 +33,10 @@ import { CompletedProbationComponent } from './completed-probation/completed-pro
 import { ProbationPolicyComponent } from './probation-policy/probation-policy.component';
 import { CurrentOpeningComponent } from './current-opening/current-opening.component';
 import { CandidatessComponent } from './candidatess/candidatess.component';
+import { ScheduleInterviewComponent } from './schedule-interview/schedule-interview.component';
+import { InterviewFeedbackComponent } from './interview-feedback/interview-feedback.component';
 @NgModule({
-  declarations: [EmployeesComponent, AllEmployeesComponent, EmployeePageContentComponent, EmployeeListComponent, EmployeeProfileComponent, HolidaysComponent, LeavesAdminComponent, LeavesEmployeeComponent, LeaveSettingsComponent, AttendanceAdminComponent, AttendanceEmployeeComponent, DepartmentsComponent, DesignationComponent, TimesheetComponent, OvertimeComponent, EmployeeSeriesComponent, CompanySetupComponent, LegalEntitiesComponent, BusinessUnitComponent, HiringOffersComponent, InPobationComponent, EvaluationInProgressComponent, CompletedProbationComponent, ProbationPolicyComponent, CurrentOpeningComponent, CandidatessComponent],
+  declarations: [EmployeesComponent, AllEmployeesComponent, EmployeePageContentComponent, EmployeeListComponent, EmployeeProfileComponent, HolidaysComponent, LeavesAdminComponent, LeavesEmployeeComponent, LeaveSettingsComponent, AttendanceAdminComponent, AttendanceEmployeeComponent, DepartmentsComponent, DesignationComponent, TimesheetComponent, OvertimeComponent, EmployeeSeriesComponent, CompanySetupComponent, LegalEntitiesComponent, BusinessUnitComponent, HiringOffersComponent, InPobationComponent, EvaluationInProgressComponent, CompletedProbationComponent, ProbationPolicyComponent, CurrentOpeningComponent, CandidatessComponent, ScheduleInterviewComponent, InterviewFeedbackComponent],
   imports: [
     CommonModule,
     FormsModule,

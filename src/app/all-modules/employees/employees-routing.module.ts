@@ -26,6 +26,8 @@ import { ProbationPolicyComponent } from './probation-policy/probation-policy.co
 import { CurrentOpeningComponent } from './current-opening/current-opening.component';
 import { CandidateComponent } from '../candidate/candidate.component';
 import { CandidatessComponent } from './candidatess/candidatess.component';
+import { ScheduleInterviewComponent } from './schedule-interview/schedule-interview.component';
+import { InterviewFeedbackComponent } from './interview-feedback/interview-feedback.component';
 
 const routes: Routes = [
   {
@@ -127,6 +129,14 @@ const routes: Routes = [
     {
       path: 'candidatess',
       component: CandidatessComponent
+    },
+    {
+      path: 'schedule-interview',
+      component: ScheduleInterviewComponent
+    },
+    {
+      path: 'interview-feedback',
+      component: InterviewFeedbackComponent
     }
 
     ]

@@ -1,16 +1,16 @@
-import { Component, OnDestroy, OnInit, ViewChild } from "@angular/core";
-import { FormBuilder, FormGroup, Validators } from "@angular/forms";
-import { AllModulesService } from "../../all-modules.service";
-import { ToastrService } from "ngx-toastr";
-import { DataTableDirective } from "angular-datatables";
-import { Subject } from "rxjs";
+import { Component, OnInit, ViewChild } from '@angular/core';
+import { FormGroup, FormBuilder, Validators } from '@angular/forms';
+import { DataTableDirective } from 'angular-datatables';
+import { ToastrService } from 'ngx-toastr';
+import { Subject } from 'rxjs';
+import { AllModulesService } from '../../all-modules.service';
 declare const $: any;
 @Component({
-  selector: "app-departments",
-  templateUrl: "./departments.component.html",
-  styleUrls: ["./departments.component.css"],
+  selector: 'app-interview-feedback',
+  templateUrl: './interview-feedback.component.html',
+  styleUrls: ['./interview-feedback.component.css']
 })
-export class DepartmentsComponent implements OnInit {
+export class InterviewFeedbackComponent implements OnInit {
   @ViewChild(DataTableDirective, { static: false })
   public dtElement: DataTableDirective;
   public dtOptions: DataTables.Settings = {};

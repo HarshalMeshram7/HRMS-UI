@@ -1,0 +1,243 @@
+<!-- Page Content -->
+<div class="content container-fluid">
+
+    <!-- Page Header -->
+    <div class="page-header">
+        <div class="row align-items-center">
+            <div class="col">
+                <h3 class="page-title">Schedule </h3>
+                <ul class="breadcrumb">  
+                    <li class="breadcrumb-item"><a routerLink="/layout/dashboard/admin">Dashboard</a></li>
+                    <li class="breadcrumb-item active">Schedule </li>
+                </ul>
+            </div>
+            <div class="col-auto float-end ms-auto">
+                <a  class="btn add-btn" data-bs-toggle="modal" data-bs-target="#add_schedule"><i
+                        class="fa fa-plus"></i>Add Schedule</a>
+            </div>
+        </div>
+    </div>
+    <!-- /Page Header -->
+
+
+
+    <div class="row">
+        <div class="col-md-12">
+            <div>
+                <table datatable [dtOptions]="dtOptions" [dtTrigger]="dtTrigger"
+                    class="table table-striped custom-table datatable mb-0">
+                    <thead>
+                        <tr>
+                            <th style="width: 30px;">#</th>
+                            <th>Name</th>
+                            <th>Job Title</th>
+                            <th>Status</th>
+                            <th>Day & Date</th>
+                            <th>Action</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr *ngFor="let item of lstSchedule">
+                            <td>{{item.no}}</td>
+                            <td>{{item.name}}</td>
+                            <td>{{item.job_title}}</td>
+                            <td>{{item.status}}</td>
+                            <td>{{item.date}}</td>
+                            <td>
+                                <div class="dropdown dropdown-action">
+                                    <a  class="action-icon dropdown-toggle" data-bs-toggle="dropdown"
+                                        aria-expanded="false"><i class="material-icons">more_vert</i></a>
+                                    <div class="dropdown-menu dropdown-menu-right">
+                                        <a class="dropdown-item"  data-bs-toggle="modal"
+                                            data-bs-target="#edit_schedule" (click)="edit(item.no)"><i
+                                                class="fa fa-pencil m-r-5"></i> Edit</a>
+                                        <a class="dropdown-item"  data-bs-toggle="modal"
+                                            data-bs-target="#delete_department" (click)="delete(item.no)"><i
+                                                class="fa fa-trash-o m-r-5"></i>
+                                            Delete</a>
+                                    </div>
+                                </div>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- /Page Content -->
+
+<!-- Add Department Modal -->
+
+<div id="add_schedule" class="modal custom-modal fade" role="dialog">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">Schedule Interview</h5>
+                <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            
+            <div class="modal-body">
+                <form (ngSubmit)="addSchedule()" [formGroup]="addScheduleForm">
+                    <div class="form-group">
+                        <label>Name of candidate <span class="text-danger">*</span></label>
+                        <input class="form-control" type="text" id="canName"
+                            [class.invalid]="addScheduleForm.get('ScheduleName').invalid && addScheduleForm.get('ScheduleName').touched"
+                            formControlName="ScheduleName">
+                        <div
+                            *ngIf="addScheduleForm.get('ScheduleName').invalid && addScheduleForm.get('ScheduleName').touched">
+                            <small
+                                *ngIf="addScheduleForm.get('ScheduleName').invalid && addScheduleForm.get('ScheduleName').touched"
+                                class="text-danger"> *Name of candidate is required</small>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Job Title <span class="text-danger">*</span></label>
+                        <input class="form-control" type="text" id="canTitle"
+                            [class.invalid]="addScheduleForm.get('jobTitle').invalid && addScheduleForm.get('jobTitle').touched"
+                            formControlName="jobTitle">
+                        <div
+                            *ngIf="addScheduleForm.get('jobTitle').invalid && addScheduleForm.get('jobTitle').touched">
+                            <small
+                                *ngIf="addScheduleForm.get('jobTitle').invalid && addScheduleForm.get('jobTitle').touched"
+                                class="text-danger"> *Job title is required</small>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Status <span class="text-danger">*</span></label>
+                        <input class="form-control" type="text" id="canStatus"
+                            [class.invalid]="addScheduleForm.get('jobStatus').invalid && addScheduleForm.get('jobStatus').touched"
+                            formControlName="jobStatus">
+                        <div
+                            *ngIf="addScheduleForm.get('jobStatus').invalid && addScheduleForm.get('jobStatus').touched">
+                            <small
+                                *ngIf="addScheduleForm.get('jobStatus').invalid && addScheduleForm.get('jobStatus').touched"
+                                class="text-danger"> *Status is required</small>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Date & Time <span class="text-danger">*</span></label>
+                        <input class="form-control" type="datetime-local" id="canSlot"
+                            [class.invalid]="addScheduleForm.get('intSchedule').invalid && addScheduleForm.get('intSchedule').touched"
+                            formControlName="intSchedule">
+                        <div
+                            *ngIf="addScheduleForm.get('intSchedule').invalid && addScheduleForm.get('intSchedule').touched">
+                            <small
+                                *ngIf="addScheduleForm.get('intSchedule').invalid && addScheduleForm.get('intSchedule').touched"
+                                class="text-danger"> *Date & Time is required</small>
+                        </div>
+                    </div>
+
+                
+
+                    <div class="submit-section">
+                        <button class="btn btn-primary submit-btn" type="submit">Submit</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div> 
+<!-- /Add schedule Modal -->
+
+
+<!-- Edit Schedule Modal -->
+<div id="edit_schedule" class="modal custom-modal fade" role="dialog">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">Edit Schedule</h5>
+                <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <!-- <form (ngSubmit)="editSchedule()" [formGroup]="editScheduleForm">
+                    <div class="form-group">
+                        <label>Department Name <span class="text-danger">*</span></label>
+                        <input class="form-control" value="IT Management" type="text"
+                            [class.invalid]="editDepartmentForm.get('ScheduleName').invalid && editDepartmentForm.get('ScheduleName').touched"
+                            formControlName="ScheduleName">
+                        <div
+                            *ngIf="editDepartmentForm.get('ScheduleName').invalid && editDepartmentForm.get('ScheduleName').touched">
+                            <small
+                                *ngIf="editDepartmentForm.get('ScheduleName').invalid && editDepartmentForm.get('ScheduleName').touched"
+                                class="text-danger"> *Department Name required</small>
+                        </div>
+                    </div>
+
+                    <div class="submit-section">
+                        <button class="btn btn-primary submit-btn">Save</button>
+                    </div>
+                </form> -->
+
+                <form (ngSubmit)="editSchedule()" [formGroup]="editScheduleForm">
+                    <div class="form-group">
+                        <label>Name of candidate <span class="text-danger">*</span></label>
+                        <input class="form-control" type="text" id="canName"
+                            [class.invalid]="editScheduleForm.get('ScheduleName').invalid && editScheduleForm.get('ScheduleName').touched"
+                            formControlName="ScheduleName">
+                        <div
+                            *ngIf="editScheduleForm.get('ScheduleName').invalid && editScheduleForm.get('ScheduleName').touched">
+                            <small
+                                *ngIf="editScheduleForm.get('ScheduleName').invalid && editScheduleForm.get('ScheduleName').touched"
+                                class="text-danger"> *Name of candidate is required</small>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Job Title <span class="text-danger">*</span></label>
+                        <input class="form-control" type="text" id="canTitle"
+                            [class.invalid]="editScheduleForm.get('jobTitle').invalid && editScheduleForm.get('jobTitle').touched"
+                            formControlName="jobTitle">
+                        <div
+                            *ngIf="editScheduleForm.get('jobTitle').invalid && editScheduleForm.get('jobTitle').touched">
+                            <small
+                                *ngIf="editScheduleForm.get('jobTitle').invalid && editScheduleForm.get('jobTitle').touched"
+                                class="text-danger"> *Job title is required</small>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Status <span class="text-danger">*</span></label>
+                        <input class="form-control" type="text" id="canStatus"
+                            [class.invalid]="editScheduleForm.get('jobStatus').invalid && editScheduleForm.get('jobStatus').touched"
+                            formControlName="jobStatus">
+                        <div
+                            *ngIf="editScheduleForm.get('jobStatus').invalid && editScheduleForm.get('jobStatus').touched">
+                            <small
+                                *ngIf="editScheduleForm.get('jobStatus').invalid && editScheduleForm.get('jobStatus').touched"
+                                class="text-danger"> *Status is required</small>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Date & Time <span class="text-danger">*</span></label>
+                        <input class="form-control" type="datetime-local" id="canSlot"
+                            [class.invalid]="editScheduleForm.get('intSchedule').invalid && editScheduleForm.get('intSchedule').touched"
+                            formControlName="intSchedule">
+                        <div
+                            *ngIf="editScheduleForm.get('intSchedule').invalid && editScheduleForm.get('intSchedule').touched">
+                            <small
+                                *ngIf="editScheduleForm.get('intSchedule').invalid && editScheduleForm.get('intSchedule').touched"
+                                class="text-danger"> *Date & Time is required</small>
+                        </div>
+                    </div>
+
+                
+
+                    <div class="submit-section">
+                        <button class="btn btn-primary submit-btn" type="submit">Submit</button>
+                    </div>
+                </form>
+
+            </div>
+        </div>
+    </div>
+</div> 
+<!-- /Edit Schedule Modal -->

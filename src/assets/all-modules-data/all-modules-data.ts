@@ -565,6 +565,46 @@ export class AllModulesData implements InMemoryDbService {
         id: 13,
       },
     ];
+
+    let schedules = [
+    {
+      no: 1,
+      name: "John",
+      job_title: "Web Developer",
+      status: "Re-scheduleded",
+      date: 'Friday 21-10-2022 '
+      
+    },
+    { 
+      
+      no: 2, 
+      name: "John", 
+      job_title: "Web Developer", 
+      status: "Scheduleded", 
+  date: 'Friday 21-10-2022 '  },
+    {
+      no: 3,
+      name: "John",
+      job_title: "Web Developer",
+      status: "Re-scheduleded",
+      date: 'Friday 21-10-2022 '
+    },
+    {
+      no: 4,
+      name: "John",
+      job_title: "Web Developer",
+      status: "Re-scheduleded",
+      date: 'Friday 21-10-2022 '
+    },
+    {
+      no: 5,
+      name: "John",
+      job_title: "Web Developer",
+      status: "Re-scheduleded",
+      date: 'Friday 21-10-2022 '
+    },
+  ];
+
     let holidays = [
       {
         id: 1,
@@ -975,6 +1015,8 @@ export class AllModulesData implements InMemoryDbService {
       },
     ];
 
+    
+
     let tickets = [
       {
         ticketId: "#TKT-001",
@@ -1331,6 +1373,13 @@ export class AllModulesData implements InMemoryDbService {
         id: 6,
       },
     ];
+
+
+    // let feedback = [
+    //   {
+    //     Name: 
+    //   },
+    // ];
 
     let taxes = [
       {
@@ -4361,7 +4410,8 @@ export class AllModulesData implements InMemoryDbService {
       budgetexpense: budgetexpense,
       budget: budget,
       shiftlist: shiftlist,
-      shiftscheduling: shiftscheduling
+      shiftscheduling: shiftscheduling,
+      schedules: schedules
     };
   }
 }

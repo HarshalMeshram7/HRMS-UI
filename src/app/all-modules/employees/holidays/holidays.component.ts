@@ -22,7 +22,7 @@ export class HolidaysComponent implements OnInit, OnDestroy {
 
   public rows = [];
   public srch = [];
-  public statusValue;
+  public statusValue: any;
   public dtTrigger: Subject<any> = new Subject();
   public pipe = new DatePipe("en-US");
   public addHolidayForm: FormGroup;
