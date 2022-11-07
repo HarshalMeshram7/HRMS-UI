@@ -15,13 +15,13 @@ export class InterviewFeedbackComponent implements OnInit {
   public dtElement: DataTableDirective;
   public dtOptions: DataTables.Settings = {};
   public dtTrigger: Subject<any> = new Subject();
-  public lstDepartment: any[];
-  public url: any = "departments";
+  public lstFeedback: any[];
+  public url: any = "interview_feedback";
   public tempId: any;
   public editId: any;
   public rows = [];
   public srch = [];
-  public addDepartmentForm: FormGroup;
+  public addDepartmentForm: FormGroup;  
   public editDepartmentForm: FormGroup;
   constructor(
     private formBuilder: FormBuilder,
@@ -61,9 +61,9 @@ export class InterviewFeedbackComponent implements OnInit {
   // Get department list  Api Call
   LoadDepartment() {
     this.srvModuleService.get(this.url).subscribe((data) => {
-      this.lstDepartment = data;
+      this.lstFeedback = data;
       this.dtTrigger.next();
-      this.rows = this.lstDepartment;
+      this.rows = this.lstFeedback;
       this.srch = [...this.rows];
     });
   }
@@ -111,10 +111,10 @@ export class InterviewFeedbackComponent implements OnInit {
   // To Get The department Edit Id And Set Values To Edit Modal Form
   edit(value) {
     this.editId = value;
-    const index = this.lstDepartment.findIndex((item) => {
+    const index = this.lstFeedback.findIndex((item) => {
       return item.id === value;
     });
-    let toSetValues = this.lstDepartment[index];
+    let toSetValues = this.lstFeedback[index];
     this.editDepartmentForm.setValue({
       DepartmentName: toSetValues.departmentName,
     });

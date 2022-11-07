@@ -24,10 +24,11 @@ import { EvaluationInProgressComponent } from './evaluation-in-progress/evaluati
 import { CompletedProbationComponent } from './completed-probation/completed-probation.component';
 import { ProbationPolicyComponent } from './probation-policy/probation-policy.component';
 import { CurrentOpeningComponent } from './current-opening/current-opening.component';
-import { CandidateComponent } from '../candidate/candidate.component';
 import { CandidatessComponent } from './candidatess/candidatess.component';
 import { ScheduleInterviewComponent } from './schedule-interview/schedule-interview.component';
 import { InterviewFeedbackComponent } from './interview-feedback/interview-feedback.component';
+import { DetailsComponent } from './details/details.component';
+import { CandidateOfferComponent } from './candidate-offer/candidate-offer.component';
 
 const routes: Routes = [
   {
@@ -137,6 +138,14 @@ const routes: Routes = [
     {
       path: 'interview-feedback',
       component: InterviewFeedbackComponent
+    },
+    {
+      path: 'details',
+      component: DetailsComponent
+    },
+    {
+      path: 'offers',
+      component: CandidateOfferComponent
     }
 
     ]

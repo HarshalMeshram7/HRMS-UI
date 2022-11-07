@@ -11,10 +11,10 @@
                     <li class="breadcrumb-item active">Interview Feedback</li>
                 </ul>
             </div>
-            <div class="col-auto float-end ms-auto">
-                <a  class="btn add-btn" data-bs-toggle="modal" data-bs-target="#add_department"><i
-                        class="fa fa-plus"></i>Job Title</a>
-            </div>
+            <!-- <div class="col-auto float-end ms-auto">
+                <a  class="btn add-btn" data-bs-toggle="modal" data-bs-target="#add_department">
+                    <i class="fa fa-plus"></i>Job Title</a>
+            </div> -->
         </div>
     </div>
     <!-- /Page Header -->
@@ -29,15 +29,19 @@
                     <thead>
                         <tr>
                             <th style="width: 30px;">#</th>
+                            <th>Name Of Candidate</th>
+                            <th>Contact</th>
                             <th>Job Title</th>
-                            <th class="text-end">Action</th>
+                            <th>Action</th>
                         </tr>
                     </thead>
                     <tbody>
-                        <tr *ngFor="let item of lstDepartment">
+                        <tr *ngFor="let item of lstFeedback">
                             <td>{{item.id}}</td>
+                            <td><a routerLink="/layout/employees/details">{{item.candiadate_name}}</a></td>
+                            <td>{{item.contact}}</td>
                             <td>{{item.departmentName}}</td>
-                            <td class="text-end">
+                            <td>
                                 <div class="dropdown dropdown-action">
                                     <a  class="action-icon dropdown-toggle" data-bs-toggle="dropdown"
                                         aria-expanded="false"><i class="material-icons">more_vert</i></a>
@@ -62,7 +66,7 @@
 <!-- /Page Content -->
 
 <!-- Add Department Modal -->
-<div id="add_department" class="modal custom-modal fade" role="dialog">
+<!-- <div id="add_department" class="modal custom-modal fade" role="dialog">
     <div class="modal-dialog modal-dialog-centered" role="document">
         <div class="modal-content">
             <div class="modal-header">
@@ -93,11 +97,11 @@
             </div>
         </div>
     </div>
-</div> 
+</div>  -->
 <!-- /Add Department Modal -->
 
 <!-- Edit Department Modal -->
- <div id="edit_department" class="modal custom-modal fade" role="dialog">
+ <!-- <div id="edit_department" class="modal custom-modal fade" role="dialog">
     <div class="modal-dialog modal-dialog-centered" role="document">
         <div class="modal-content">
             <div class="modal-header">
@@ -127,7 +131,33 @@
             </div>
         </div>
     </div>
-</div> 
+</div>  -->
 <!-- /Edit Department Modal -->
 
 <!-- Delete Department Modal -->
+<div class="modal custom-modal fade" id="delete_department" role="dialog">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-body">
+                <div class="form-header">
+                    <h3>Delete Department</h3>
+                    <p>Are you sure want to delete?</p>
+                </div>
+                <div class="modal-btn delete-action">
+                    <div class="row">
+                        <div class="col-6">
+                            <a  class="btn btn-primary continue-btn"
+                                (click)="deleteDepartment()">Delete</a>
+                        </div>
+                        <div class="col-6">
+                            <a  data-bs-dismiss="modal"
+                                class="btn btn-primary cancel-btn">Cancel</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- /Delete Department Modal -->
+<router-outlet></router-outlet>

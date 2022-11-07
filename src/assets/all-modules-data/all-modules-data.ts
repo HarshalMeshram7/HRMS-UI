@@ -4,6 +4,49 @@ export class AllModulesData implements InMemoryDbService {
   createDb() {
     // Apps Module Contacts Database
 
+    let CandidateOffer = [
+      {
+        id: "1",
+        name: "John Doe",
+        title: "Web Developer",
+        status: "Selected",
+        offerMade: "Received",
+        dateOfferMade: "18-04-2013"
+      },
+      {
+        id: "2",
+        name: "John Doe",
+        title: "Web Developer",
+        status: "Selected",
+        offerMade: "Received",
+        dateOfferMade: "18-04-2013"
+      },
+      {
+        id: "3",
+        name: "John Doe",
+        title: "Web Developer",
+        status: "Selected",
+        offerMade: "Received",
+        dateOfferMade: "18-04-2013"
+      },
+      {
+        id: "4",
+        name: "John Doe",
+        title: "Web Developer",
+        status: "Selected",
+        offerMade: "Received",
+        dateOfferMade: "18-04-2013"
+      },
+      {
+        id: "5",
+        name: "John Doe",
+        title: "Web Developer",
+        status: "Selected",
+        offerMade: "Received",
+        dateOfferMade: "18-04-2013"
+      },
+    ]
+
     let contacts = [
       {
         name: "John Doe",
@@ -4332,7 +4375,24 @@ export class AllModulesData implements InMemoryDbService {
       }
     ];
 
+
+    let interview_feedback = [
+      {
+        id: 1,
+        departmentName: "Finance",
+        candiadate_name: "John",
+        contact: "8523697410"
+      },
+      {
+        id: 2,
+        departmentName: "Technical",
+        candiadate_name: "Doe",
+        contact: "8523694410"
+      }
+    ];
+
     return {
+      interview_feedback: interview_feedback,
       invoice: invoice,
       contacts: contacts,
       clients: clients,
@@ -4411,7 +4471,8 @@ export class AllModulesData implements InMemoryDbService {
       budget: budget,
       shiftlist: shiftlist,
       shiftscheduling: shiftscheduling,
-      schedules: schedules
+      schedules: schedules,
+      CandidateOffer: CandidateOffer
     };
   }
 }
