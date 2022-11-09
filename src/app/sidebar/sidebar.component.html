@@ -524,7 +524,12 @@
                   >Offers</a>
               </li>
 
-              
+              <li routerLink="/layout/employees/pastOffers">
+                <a
+                  href="javascript:"
+                  [ngClass]="{ active: urlComplete.subUrl === 'pastOffers' }"
+                  >Past Offers</a>
+              </li>
             </ul>
           </li>
 

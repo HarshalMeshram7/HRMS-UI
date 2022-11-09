@@ -4,6 +4,49 @@ export class AllModulesData implements InMemoryDbService {
   createDb() {
     // Apps Module Contacts Database
 
+    let PastOffer = [
+      {
+        id: "1",
+        name: "John Doe",
+        title: "Web Developer",
+        status: "Selected",
+        offerMade: "3.4 LPA",
+        dateOfferMade: "18-04-2013"
+      },
+      {
+        id: "2",
+        name: "John Doe",
+        title: "Web Developer",
+        status: "Selected",
+        offerMade: "3.4 LPA",
+        dateOfferMade: "18-04-2013"
+      },
+      {
+        id: "3",
+        name: "John Doe",
+        title: "Web Developer",
+        status: "Selected",
+        offerMade: "3.4 LPA",
+        dateOfferMade: "18-04-2013"
+      },
+      {
+        id: "4",
+        name: "John Doe",
+        title: "Web Developer",
+        status: "Selected",
+        offerMade: "3.4 LPA",
+        dateOfferMade: "18-04-2013"
+      },
+      {
+        id: "5",
+        name: "John Doe",
+        title: "Web Developer",
+        status: "Selected",
+        offerMade: "3.4 LPA",
+        dateOfferMade: "18-04-2013"
+      },
+    ]
+
     let CandidateOffer = [
       {
         id: "1",
@@ -45,7 +88,7 @@ export class AllModulesData implements InMemoryDbService {
         offerMade: "Received",
         dateOfferMade: "18-04-2013"
       },
-    ]
+    ];
 
     let contacts = [
       {
@@ -4472,7 +4515,8 @@ export class AllModulesData implements InMemoryDbService {
       shiftlist: shiftlist,
       shiftscheduling: shiftscheduling,
       schedules: schedules,
-      CandidateOffer: CandidateOffer
+      CandidateOffer: CandidateOffer,
+      PastOffer: PastOffer
     };
   }
 }

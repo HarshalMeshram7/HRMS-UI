@@ -29,6 +29,7 @@ import { ScheduleInterviewComponent } from './schedule-interview/schedule-interv
 import { InterviewFeedbackComponent } from './interview-feedback/interview-feedback.component';
 import { DetailsComponent } from './details/details.component';
 import { CandidateOfferComponent } from './candidate-offer/candidate-offer.component';
+import { PastOfferComponent } from './past-offer/past-offer.component';
 
 const routes: Routes = [
   {
@@ -146,6 +147,10 @@ const routes: Routes = [
     {
       path: 'offers',
       component: CandidateOfferComponent
+    },
+    {
+      path: 'pastOffers',
+      component: PastOfferComponent
     }
 
     ]
