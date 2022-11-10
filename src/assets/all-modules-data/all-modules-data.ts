@@ -4,6 +4,47 @@ export class AllModulesData implements InMemoryDbService {
   createDb() {
     // Apps Module Contacts Database
 
+    let FeedbackCategory = [
+      {
+        no: 1,
+        name: "John",
+        department: "Development",
+        categories:
+           [{category: "Mathematical aptitude"},
+            {category: "Problem-solving skills"},
+            {category: "Programming languages"},
+            {category: "Excellent organisational "},
+            {category: "Accuracy"}]
+          ,
+          ratings:
+           [{rate: "8/10"},
+            {rate: "7/10"},
+            {rate: "8/10"},
+            {rate: "7/10 "},
+            {rate: "8/10"}]
+          
+      },
+      {
+        no: 2,
+        name: "John2",
+        department: "Development2",
+        categories:
+           [{category: "Mathematical aptitude2"},
+            {category: "Problem-solving skills2"},
+            {category: "Programming languages2"},
+            {category: "Excellent organisational 2"},
+            {category: "Accuracy2"}]
+          ,
+          ratings:
+           [{rate: "8/10"},
+            {rate: "7/10"},
+            {rate: "8/10"},
+            {rate: "7/10 "},
+            {rate: "8/10"}]
+          
+      }
+    ];
+
     let PastOffer = [
       {
         id: "1",
@@ -696,7 +737,7 @@ export class AllModulesData implements InMemoryDbService {
         id: 1,
         title: "New Year",
         holidaydate: "01-01-2020",
-        day: "sun day",
+        day: "sun day", 
       },
       {
         id: 2,
@@ -2936,6 +2977,13 @@ export class AllModulesData implements InMemoryDbService {
             qty: 10,
             amount: 100,
           },
+          {
+            item: "Item2",
+            description: "Description2",
+            unit_cost: "10",
+            qty: 10,
+            amount: 100,
+          },
         ],
         totalamount: 100,
         discount: 5,
@@ -4435,6 +4483,7 @@ export class AllModulesData implements InMemoryDbService {
     ];
 
     return {
+      FeedbackCategory: FeedbackCategory,
       interview_feedback: interview_feedback,
       invoice: invoice,
       contacts: contacts,
@@ -4516,7 +4565,7 @@ export class AllModulesData implements InMemoryDbService {
       shiftscheduling: shiftscheduling,
       schedules: schedules,
       CandidateOffer: CandidateOffer,
-      PastOffer: PastOffer
+      PastOffer: PastOffer,
     };
   }
 }

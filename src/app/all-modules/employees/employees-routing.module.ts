@@ -30,6 +30,7 @@ import { InterviewFeedbackComponent } from './interview-feedback/interview-feedb
 import { DetailsComponent } from './details/details.component';
 import { CandidateOfferComponent } from './candidate-offer/candidate-offer.component';
 import { PastOfferComponent } from './past-offer/past-offer.component';
+import { FeedbackCategoryComponent } from './feedback-category/feedback-category.component';
 
 const routes: Routes = [
   {
@@ -151,6 +152,10 @@ const routes: Routes = [
     {
       path: 'pastOffers',
       component: PastOfferComponent
+    },
+    {
+      path: 'feedbackCategory',
+      component: FeedbackCategoryComponent
     }
 
     ]

@@ -12,7 +12,7 @@ import { EmployeesComponent } from './src/app/all-modules/employees/employees.co
 @NgModule({
   declarations: [
     AppComponent,
-    EmployeesComponent
+    EmployeesComponent,
   ],
   imports: [
     BrowserModule,
