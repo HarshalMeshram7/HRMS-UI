@@ -38,9 +38,12 @@ import { InterviewFeedbackComponent } from './interview-feedback/interview-feedb
 import { CandidateOfferComponent } from './candidate-offer/candidate-offer.component';
 import { PastOfferComponent } from './past-offer/past-offer.component';
 import { FeedbackCategoryComponent } from './feedback-category/feedback-category.component';
+import { SummaryComponent } from './summary/summary.component';
+import { NotInitiatedComponent } from './not-initiated/not-initiated.component';
+import { SkippedComponent } from './skipped/skipped.component';
 // import { DetailsComponent } from './interview-feedback/details/details.component';
 @NgModule({
-  declarations: [EmployeesComponent, AllEmployeesComponent, EmployeePageContentComponent, EmployeeListComponent, EmployeeProfileComponent, HolidaysComponent, LeavesAdminComponent, LeavesEmployeeComponent, LeaveSettingsComponent, AttendanceAdminComponent, AttendanceEmployeeComponent, DepartmentsComponent, DesignationComponent, TimesheetComponent, OvertimeComponent, EmployeeSeriesComponent, CompanySetupComponent, LegalEntitiesComponent, BusinessUnitComponent, HiringOffersComponent, InPobationComponent, EvaluationInProgressComponent, CompletedProbationComponent, ProbationPolicyComponent, CurrentOpeningComponent, CandidatessComponent, ScheduleInterviewComponent, InterviewFeedbackComponent, CandidateOfferComponent, PastOfferComponent, FeedbackCategoryComponent,],
+  declarations: [EmployeesComponent, AllEmployeesComponent, EmployeePageContentComponent, EmployeeListComponent, EmployeeProfileComponent, HolidaysComponent, LeavesAdminComponent, LeavesEmployeeComponent, LeaveSettingsComponent, AttendanceAdminComponent, AttendanceEmployeeComponent, DepartmentsComponent, DesignationComponent, TimesheetComponent, OvertimeComponent, EmployeeSeriesComponent, CompanySetupComponent, LegalEntitiesComponent, BusinessUnitComponent, HiringOffersComponent, InPobationComponent, EvaluationInProgressComponent, CompletedProbationComponent, ProbationPolicyComponent, CurrentOpeningComponent, CandidatessComponent, ScheduleInterviewComponent, InterviewFeedbackComponent, CandidateOfferComponent, PastOfferComponent, FeedbackCategoryComponent, SummaryComponent, NotInitiatedComponent, SkippedComponent,],
   imports: [
     CommonModule,
     FormsModule,

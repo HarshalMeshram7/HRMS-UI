@@ -1,0 +1,62 @@
+<!-- Page Content -->
+<div class="content container-fluid">
+
+    <!-- Page Header -->
+    <div class="page-header">
+        <div class="row align-items-center">
+            <div class="col">
+                <h3 class="page-title">Summary</h3>
+                <ul class="breadcrumb">  
+                    <li class="breadcrumb-item"><a routerLink="/layout/dashboard/admin">Dashboard</a></li>
+                    <li class="breadcrumb-item active">Summary</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <!-- /Page Header -->
+
+
+
+    <div class="row">
+        <div class="col-md-12">
+            <div>
+                <table datatable [dtOptions]="dtOptions" [dtTrigger]="dtTrigger"
+                    class="table table-striped custom-table datatable mb-0">
+                    <thead>
+                        <tr>
+                            <th style="width: 30px;">#</th>
+                            <th>Name</th>
+                            <th>Department</th>
+                            <th>Date</th>
+                            <th class="text-end">Action</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr *ngFor="let item of lstSummary">
+                            <td>{{item.no}}</td>
+                            <td>{{item.name}}</td>
+                            <td>{{item.department}}</td>
+                            <td>{{item.date}}</td>
+                            <td class="text-end">
+                                <div class="dropdown dropdown-action">
+                                    <a  class="action-icon dropdown-toggle" data-bs-toggle="dropdown"
+                                        aria-expanded="false"><i class="material-icons">more_vert</i></a>
+                                    <div class="dropdown-menu dropdown-menu-right">
+                                        <a class="dropdown-item"  data-bs-toggle="modal"
+                                            data-bs-target="#edit_department" (click)="edit(item.id)"> Not Initiated</a>
+                                        <a class="dropdown-item"  data-bs-toggle="modal"
+                                            data-bs-target="#edit_department" (click)="edit(item.id)">Skipped</a>
+                                        <a class="dropdown-item"  data-bs-toggle="modal"
+                                            data-bs-target="#edit_department" (click)="edit(item.id)">Cancelled</a>
+                                        
+                                    </div>
+                                </div>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- /Page Content -->

@@ -1,0 +1,66 @@
+<!-- Page Content -->
+<div class="content container-fluid">
+
+    <!-- Page Header -->
+    <div class="page-header">
+        <div class="row align-items-center">
+            <div class="col">
+                <h3 class="page-title">Onboarding Skipped</h3>
+                <ul class="breadcrumb">  
+                    <li class="breadcrumb-item"><a routerLink="/layout/dashboard/admin">Dashboard</a></li>
+                    <li class="breadcrumb-item active">Onboarding Skipped</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <!-- /Page Header -->
+
+
+
+    <div class="row">
+        <div class="col-md-12">
+            <div>
+                <table datatable [dtOptions]="dtOptions" [dtTrigger]="dtTrigger"
+                    class="table table-striped custom-table datatable mb-0">
+                    <thead>
+                        <tr>
+                            <th style="width: 30px;">#</th>
+                            <th>Name</th>
+                            <th>Location</th>
+                            <th>Department</th>
+                            <th>Reporting Maneger</th>
+                            <th>Mobile No & Email</th>
+                            <th class="text-end">Action</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr *ngFor="let item of lstSkipped">
+                            <td>{{item.no}}</td>
+                            <td>{{item.name}}</td>
+                            <td>{{item.location}}</td>
+                            <td>{{item.department}}</td>
+                            <td>{{item.manager}}</td>
+                            <td>
+                                <span>{{item.mobile}}</span> <br>
+                                <span class="text-muted">{{item.email}}</span>
+                            </td>
+                            <td class="text-end">
+                                <div class="dropdown dropdown-action">
+                                    <a  class="action-icon dropdown-toggle" data-bs-toggle="dropdown"
+                                        aria-expanded="false"><i class="material-icons">more_vert</i></a>
+                                    <div class="dropdown-menu dropdown-menu-right">
+                                        <a class="dropdown-item"  data-bs-toggle="modal"
+                                            data-bs-target="#edit_department" (click)="edit(item.id)">Initated Onbording</a>
+                                        <a class="dropdown-item"  data-bs-toggle="modal"
+                                            data-bs-target="#delete_department" (click)="tempId = item.id">Skip Onbording</a>
+                                    </div>
+                                </div>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- /Page Content -->

@@ -31,6 +31,9 @@ import { DetailsComponent } from './details/details.component';
 import { CandidateOfferComponent } from './candidate-offer/candidate-offer.component';
 import { PastOfferComponent } from './past-offer/past-offer.component';
 import { FeedbackCategoryComponent } from './feedback-category/feedback-category.component';
+import { SummaryComponent } from './summary/summary.component';
+import { NotInitiatedComponent } from './not-initiated/not-initiated.component';
+import { SkippedComponent } from './skipped/skipped.component';
 
 const routes: Routes = [
   {
@@ -156,7 +159,19 @@ const routes: Routes = [
     {
       path: 'feedbackCategory',
       component: FeedbackCategoryComponent
-    }
+    },
+    {
+      path: 'summary',
+      component: SummaryComponent
+    },
+    {
+      path: 'notInitaited',
+      component: NotInitiatedComponent
+    },
+    {
+      path: 'skipped',
+      component: SkippedComponent
+    },
 
     ]
   }

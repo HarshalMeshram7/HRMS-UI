@@ -45,9 +45,11 @@
                                <li  *ngFor="let x of item.categories">{{x.category}}</li>  
                             </ul>
                             </td>
-                            <ul type="none">
-                               <li *ngFor="let y of item.ratings">{{y.rate}} <br></li> 
-                            </ul>
+                            <td>
+                                <ul type="none">
+                                   <li *ngFor="let y of item.ratings">{{y.rate}} <br></li> 
+                                </ul>
+                            </td>
                             
                             <td class="text-end">
                                 <div class="dropdown dropdown-action">
