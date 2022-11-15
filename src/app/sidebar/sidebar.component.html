@@ -15,7 +15,6 @@
               href="javascript:"
               [ngClass]="{ subdrop: urlComplete.mainUrl === 'dashboard' }"
             >
-
               <i class="la la-dashboard"></i>
               <span>Dashboard</span>
               <span class="menu-arrow"></span>
@@ -148,63 +147,112 @@
           <li class="menu-title">
             <span>Organization</span>
           </li>
-          <li 
-          class="submenu"
+          <li
+            class="submenu"
             [ngClass]="{
               active:
-                (urlComplete.mainUrl === 'organization' &&
-                  urlComplete.subUrl === 'businessUnit') }"
-                  >
-
-                  <a
+                urlComplete.mainUrl === 'organization' &&
+                urlComplete.subUrl === 'businessUnit'
+            }"
+          >
+            <a
+              href="javascript:"
+              [ngClass]="{
+                subdrop:
+                  (urlComplete.mainUrl === 'organization' &&
+                    urlComplete.subUrl === 'businessUnit') ||
+                  (urlComplete.mainUrl === 'organization' &&
+                    urlComplete.subUrl === 'demoitem')
+              }"
+              class="noti-dot"
+              ><i class="la la-user"></i> <span> Organization</span>
+              <span class="menu-arrow"></span
+            ></a>
+            <ul
+              style="display: none"
+              [ngStyle]="{
+                display:
+                  urlComplete.mainUrl === 'organization' &&
+                  urlComplete.subUrl === 'businessUnit'
+              }"
+            >
+              <li routerLink="/layout/organization/businessUnit">
+                <a
                   href="javascript:"
                   [ngClass]="{
-                    subdrop:
-                    (urlComplete.mainUrl === 'organization' &&
-                    urlComplete.subUrl === 'businessUnit') ||
-                    (urlComplete.mainUrl === 'organization' &&
-                    urlComplete.subUrl === 'demoitem') 
-                  
-                  }" 
-                    
-                    class="noti-dot"
-                    ><i class="la la-user"></i> <span> Organization</span>
-                    <span class="menu-arrow"></span
-                  ></a>
-                  <ul
-                  style="display: none"
-                  [ngStyle]="{
-                    display:
-                    (urlComplete.mainUrl === 'organization' &&
-                    urlComplete.subUrl === 'businessUnit') }">
-                    <li routerLink="/layout/organization/businessUnit">
-                      <a
-                        href="javascript:"
-                        [ngClass]="{
-                          active:
-                            urlComplete.subUrl === 'organization' ||
-                            urlComplete.subUrl === 'businessUnit'
-                        }"
-                        >Business unit</a
-                      >
-                    </li>
-                    <li routerLink="/layout/organization/demoitem">
-                      <a
-                        href="javascript:"
-                        [ngClass]="{
-                          active:
-                            urlComplete.subUrl === 'organization' ||
-                            urlComplete.subUrl === 'demoitem'
-                        }"
-                        >demoitem unit</a
-                      >
-                    </li>
-                
-                  </ul>
-
+                    active:
+                      urlComplete.subUrl === 'organization' ||
+                      urlComplete.subUrl === 'businessUnit'
+                  }"
+                  >Business unit</a
+                >
+              </li>
+              <li routerLink="/layout/organization/demoitem">
+                <a
+                  href="javascript:"
+                  [ngClass]="{
+                    active:
+                      urlComplete.subUrl === 'organization' ||
+                      urlComplete.subUrl === 'demoitem'
+                  }"
+                  >demoitem unit</a
+                >
+              </li>
+            </ul>
           </li>
 
-        
+          <li class="menu-title">
+            <span>Offers</span>
+          </li>
+          <li class="submenu" [ngClass]="{active: urlComplete.mainUrl === 'layout' &&urlComplete.subUrl === 'offer' }">
+            <a
+              href="javascript:"
+              [ngClass]="{
+                subdrop:
+                  (urlComplete.mainUrl === 'layout' &&
+                    urlComplete.subUrl === 'offer') ||
+                  (urlComplete.mainUrl === 'layout' &&
+                    urlComplete.subUrl === 'offer')
+              }"
+              class="noti-dot"
+              ><i class="la la-user"></i> <span> Offer</span>
+              <span class="menu-arrow"></span
+            ></a>
+            <ul
+              style="display: none"
+              [ngStyle]="{
+                display:
+                  urlComplete.mainUrl === 'layout' &&
+                  urlComplete.subUrl === 'offer'
+              }"
+            >
+              <li routerLink="/layout/employees/offers">
+                <a
+                  href="javascript:"
+                  [ngClass]="{
+                    active:
+                      urlComplete.subUrl === 'layout' ||
+                      urlComplete.subUrl === 'offer'
+                  }"
+                  >Offer</a
+                >
+              </li>
+              <li routerLink="/layout/employees/pastOffers">
+                <a
+                  href="javascript:"
+                  [ngClass]="{
+                    active:
+                      urlComplete.subUrl === 'organization' ||
+                      urlComplete.subUrl === 'demoitem'
+                  }"
+                  >Offered Jobs</a
+                >
+              </li>
+            </ul>
+          </li>
+
+
+
 
           <li class="menu-title">
             <span>Employees</span>
@@ -237,12 +285,10 @@
                   urlComplete.subUrl === 'overtime') ||
                 (urlComplete.mainUrl === 'employees' &&
                   urlComplete.subUrl === 'employeelist') ||
-
-                  (urlComplete.mainUrl === 'employees' &&
+                (urlComplete.mainUrl === 'employees' &&
                   urlComplete.subUrl === 'demo') ||
-
-               ( urlComplete.mainUrl === 'scheduling') ||
-               ( urlComplete.mainUrl === 'shift' )
+                urlComplete.mainUrl === 'scheduling' ||
+                urlComplete.mainUrl === 'shift'
             }"
           >
             <a
@@ -273,14 +319,12 @@
                     urlComplete.subUrl === 'overtime') ||
                   (urlComplete.mainUrl === 'employees' &&
                     urlComplete.subUrl === 'employeelist') ||
-                    (urlComplete.mainUrl === 'employees' &&
+                  (urlComplete.mainUrl === 'employees' &&
                     urlComplete.subUrl === 'Hiring-offers') ||
-                    (urlComplete.mainUrl === 'employees' &&
-                  urlComplete.subUrl === 'demo') ||
-
+                  (urlComplete.mainUrl === 'employees' &&
+                    urlComplete.subUrl === 'demo') ||
                   urlComplete.mainUrl === 'scheduling' ||
-                  urlComplete.mainUrl === 'shift' 
-                 
+                  urlComplete.mainUrl === 'shift'
               }"
               class="noti-dot"
               ><i class="la la-user"></i> <span> Employees</span>
@@ -314,10 +358,8 @@
                     urlComplete.subUrl === 'overtime') ||
                   (urlComplete.mainUrl === 'employees' &&
                     urlComplete.subUrl === 'employeelist') ||
-
-                    (urlComplete.mainUrl === 'employees' &&
+                  (urlComplete.mainUrl === 'employees' &&
                     urlComplete.subUrl === 'demo') ||
-
                   urlComplete.mainUrl === 'scheduling' ||
                   urlComplete.mainUrl === 'shift'
                     ? 'block'
@@ -429,114 +471,163 @@
                 <a
                   href="javascript:"
                   [ngClass]="{ active: urlComplete.subUrl === 'series' }"
-                  >Employee Series</a>
+                  >Employee Series</a
+                >
               </li>
 
               <li routerLink="/layout/employees/company-setup">
                 <a
                   href="javascript:"
                   [ngClass]="{ active: urlComplete.subUrl === 'company-setup' }"
-                  >Company Setup</a>
+                  >Company Setup</a
+                >
               </li>
 
               <li routerLink="/layout/employees/legal-entities">
                 <a
                   href="javascript:"
-                  [ngClass]="{ active: urlComplete.subUrl === 'legal-entities' }"
-                  >Legal Entities</a>
+                  [ngClass]="{
+                    active: urlComplete.subUrl === 'legal-entities'
+                  }"
+                  >Legal Entities</a
+                >
               </li>
 
               <li routerLink="/layout/employees/businessUnit">
                 <a
                   href="javascript:"
                   [ngClass]="{ active: urlComplete.subUrl === 'businessUnit' }"
-                  >Business Unit</a>
+                  >Business Unit</a
+                >
               </li>
 
               <li routerLink="/layout/employees/Hiring-offers">
                 <a
                   href="javascript:"
                   [ngClass]="{ active: urlComplete.subUrl === 'Hiring-offers' }"
-                  >Hiring Offers</a>
+                  >Hiring Offers</a
+                >
               </li>
 
               <li routerLink="/layout/employees/inPobation">
                 <a
                   href="javascript:"
                   [ngClass]="{ active: urlComplete.subUrl === 'inPobation' }"
-                  >In Pobation</a>
+                  >In Pobation</a
+                >
               </li>
 
-              
               <li routerLink="/layout/employees/inEvaluation">
                 <a
                   href="javascript:"
                   [ngClass]="{ active: urlComplete.subUrl === 'inEvaluation' }"
-                  >In Evaluation</a>
+                  >In Evaluation</a
+                >
               </li>
 
               <li routerLink="/layout/employees/completedProbation">
                 <a
                   href="javascript:"
-                  [ngClass]="{ active: urlComplete.subUrl === 'completedProbation' }"
-                  >Completed Probation</a>
+                  [ngClass]="{
+                    active: urlComplete.subUrl === 'completedProbation'
+                  }"
+                  >Completed Probation</a
+                >
               </li>
 
               <li routerLink="/layout/employees/porbation-policy">
                 <a
                   href="javascript:"
-                  [ngClass]="{ active: urlComplete.subUrl === 'porbation-policy' }"
-                  >Porbation Policy</a>
+                  [ngClass]="{
+                    active: urlComplete.subUrl === 'porbation-policy'
+                  }"
+                  >Porbation Policy</a
+                >
               </li>
 
               <li routerLink="/layout/employees/current-opening">
                 <a
                   href="javascript:"
-                  [ngClass]="{ active: urlComplete.subUrl === 'current-opening' }"
-                  >Current Opening</a>
+                  [ngClass]="{
+                    active: urlComplete.subUrl === 'current-opening'
+                  }"
+                  >Current Opening</a
+                >
               </li>
 
               <li routerLink="/layout/employees/candidatess">
                 <a
                   href="javascript:"
                   [ngClass]="{ active: urlComplete.subUrl === 'candidatess' }"
-                  >Candidates</a>
+                  >Candidates</a
+                >
               </li>
-              
+
               <li routerLink="/layout/employees/schedule-interview">
                 <a
                   href="javascript:"
-                  [ngClass]="{ active: urlComplete.subUrl === 'schedule-interview' }"
-                  >Schedule Interview</a>
+                  [ngClass]="{
+                    active: urlComplete.subUrl === 'schedule-interview'
+                  }"
+                  >Schedule Interview</a
+                >
               </li>
 
               <li routerLink="/layout/employees/interview-feedback">
                 <a
                   href="javascript:"
-                  [ngClass]="{ active: urlComplete.subUrl === 'interview-feedback' }"
-                  >Feedback</a>
+                  [ngClass]="{
+                    active: urlComplete.subUrl === 'interview-feedback'
+                  }"
+                  >Feedback</a
+                >
               </li>
 
               <li routerLink="/layout/employees/offers">
                 <a
                   href="javascript:"
                   [ngClass]="{ active: urlComplete.subUrl === 'offers' }"
-                  >Offers</a>
+                  >Offers</a
+                >
               </li>
 
               <li routerLink="/layout/employees/pastOffers">
                 <a
                   href="javascript:"
                   [ngClass]="{ active: urlComplete.subUrl === 'pastOffers' }"
-                  >Past Offers</a>
+                  >Past Offers</a
+                >
               </li>
               <li routerLink="/layout/employees/feedbackCategory">
                 <a
                   href="javascript:"
-                  [ngClass]="{ active: urlComplete.subUrl === 'feedbackCategory' }"
-                  >Feedback Category</a>
+                  [ngClass]="{
+                    active: urlComplete.subUrl === 'feedbackCategory'
+                  }"
+                  >Feedback Category</a
+                >
               </li>
-
+              <li routerLink="/layout/employees/summary">
+                <a
+                  href="javascript:"
+                  [ngClass]="{ active: urlComplete.subUrl === 'summary' }"
+                  >Summary</a
+                >
+              </li>
+              <li routerLink="/layout/employees/notInitaited">
+                <a
+                  href="javascript:"
+                  [ngClass]="{ active: urlComplete.subUrl === 'notInitaited' }"
+                  >Not Initaited</a
+                >
+              </li>
+              <li routerLink="/layout/employees/skipped">
+                <a
+                  href="javascript:"
+                  [ngClass]="{ active: urlComplete.subUrl === 'skipped' }"
+                  >Skipped</a
+                >
+              </li>
             </ul>
           </li>
 
@@ -985,12 +1076,11 @@
                   href="javascript:"
                   [ngClass]="{ active: urlComplete.subUrl === 'daily-reports' }"
                 >
-                 Daily Report
+                  Daily Report
                 </a>
               </li>
             </ul>
           </li>
-
 
           <li class="menu-title">
             <span>Performance</span>
@@ -1012,76 +1102,71 @@
                   urlComplete.mainUrl === 'performance' ? 'block' : 'none'
               }"
             >
-            <li routerLink="/layout/performance/performancereview">
-              <a
-                href="javascript:"
-                [ngClass]="{
-                  active: urlComplete.subUrl === 'performancereview'
-                }"
-              >
-                Performance Review
-              </a>
-            </li>
+              <li routerLink="/layout/performance/performancereview">
+                <a
+                  href="javascript:"
+                  [ngClass]="{
+                    active: urlComplete.subUrl === 'performancereview'
+                  }"
+                >
+                  Performance Review
+                </a>
+              </li>
 
+              <li routerLink="/layout/performance/performanceobjective">
+                <a
+                  href="javascript:"
+                  [ngClass]="{
+                    active: urlComplete.subUrl === 'performanceobjective'
+                  }"
+                >
+                  Performance Objective
+                </a>
+              </li>
 
-            <li routerLink="/layout/performance/performanceobjective">
-              <a
-                href="javascript:"
-                [ngClass]="{
-                  active: urlComplete.subUrl === 'performanceobjective'
-                }"
-              >
-                Performance Objective
-              </a>
-            </li>
+              <li routerLink="/layout/performance/performancecore">
+                <a
+                  href="javascript:"
+                  [ngClass]="{
+                    active: urlComplete.subUrl === 'performancecore'
+                  }"
+                >
+                  Performance Core
+                </a>
+              </li>
 
-            <li routerLink="/layout/performance/performancecore">
-              <a
-                href="javascript:"
-                [ngClass]="{
-                  active: urlComplete.subUrl === 'performancecore'
-                }"
-              >
-                Performance Core
-              </a>
-            </li>
+              <li routerLink="/layout/performance/performancefeedback">
+                <a
+                  href="javascript:"
+                  [ngClass]="{
+                    active: urlComplete.subUrl === 'performancefeedback'
+                  }"
+                >
+                  Performance Feedback
+                </a>
+              </li>
 
-            <li routerLink="/layout/performance/performancefeedback">
-              <a
-                href="javascript:"
-                [ngClass]="{
-                  active: urlComplete.subUrl === 'performancefeedback'
-                }"
-              >
-                Performance Feedback
-              </a>
-            </li>
+              <li routerLink="/layout/performance/performanceskills">
+                <a
+                  href="javascript:"
+                  [ngClass]="{
+                    active: urlComplete.subUrl === 'performanceskills'
+                  }"
+                >
+                  Performance Skills
+                </a>
+              </li>
 
-            <li routerLink="/layout/performance/performanceskills">
-              <a
-                href="javascript:"
-                [ngClass]="{
-                  active: urlComplete.subUrl === 'performanceskills'
-                }"
-              >
-                Performance Skills
-              </a>
-            </li>
-
-            <li routerLink="/layout/performance/meeting">
-              <a
-                href="javascript:"
-                [ngClass]="{
-                  active: urlComplete.subUrl === 'meeting'
-                }"
-              >
-                1:1 Meeting
-              </a>
-            </li>
-
-
-
-            
+              <li routerLink="/layout/performance/meeting">
+                <a
+                  href="javascript:"
+                  [ngClass]="{
+                    active: urlComplete.subUrl === 'meeting'
+                  }"
+                >
+                  1:1 Meeting
+                </a>
+              </li>
 
               <!-- <li routerLink="/layout/performance/performanceindicator">
                 <a
@@ -1103,9 +1188,6 @@
                   Performance Appraisal
                 </a>
               </li> -->
-
-            
-
             </ul>
           </li>
           <li

@@ -3,6 +3,164 @@ import { InMemoryDbService } from "angular-in-memory-web-api";
 export class AllModulesData implements InMemoryDbService {
   createDb() {
     // Apps Module Contacts Database
+    let skipped = [
+        {
+          no: 1,
+          name: "John",
+          date: "14-11-2022",
+          location: "Bangalore",
+          department: "Development",
+          manager: "Not Available",
+          mobile :  "9632587410",
+          email: "Dummy@mail.com"
+        },
+        {
+          no: 2,
+          name: "Doe",
+          date: "14-11-2022",
+          location: "ITC/Factory",
+          department: "HR/Admin",
+          manager: "Not Available",
+          mobile :  "9632587411",
+          email: "Dummy1@mail.com"
+        },
+    ];
+
+    let notInitiated = [
+      {
+        no: 1,
+        name: "John",
+        date: "14-11-2022",
+        location: "Bangalore",
+        department: "Development",
+        manager: "Not Available",
+        mobile :  "9632587410",
+        email: "Dummy@mail.com"
+      },
+      {
+        no: 2,
+        name: "Doe",
+        date: "14-11-2022",
+        location: "ITC/Factory",
+        department: "HR/Admin",
+        manager: "Not Available",
+        mobile :  "9632587411",
+        email: "Dummy1@mail.com"
+      },
+      {
+        no: 3,
+        name: "Smith",
+        date: "14-11-2022",
+        location: "Delhi",
+        department: "Finance",
+        manager: "Not Available",
+        mobile :  "9632587412",
+        email: "Dummy2@mail.com"
+      },
+      {
+        no: 4,
+        name: "John",
+        date: "14-11-2022",
+        location: "Bangalore",
+        department: "Development",
+        manager: "Not Available",
+        mobile :  "9632587410",
+        email: "Dummy@mail.com"
+      },
+      {
+        no: 5,
+        name: "Doe",
+        date: "14-11-2022",
+        location: "ITC/Factory",
+        department: "HR/Admin",
+        manager: "Not Available",
+        mobile :  "9632587411",
+        email: "Dummy1@mail.com"
+      },
+      {
+        no: 6,
+        name: "Smith",
+        date: "14-11-2022",
+        location: "Delhi",
+        department: "Finance",
+        manager: "Not Available",
+        mobile :  "9632587412",
+        email: "Dummy2@mail.com"
+      },
+      {
+        no: 7,
+        name: "John",
+        date: "14-11-2022",
+        location: "Bangalore",
+        department: "Development",
+        manager: "Not Available",
+        mobile :  "9632587410",
+        email: "Dummy@mail.com"
+      },
+      {
+        no: 8,
+        name: "Doe",
+        date: "14-11-2022",
+        location: "ITC/Factory",
+        department: "HR/Admin",
+        manager: "Not Available",
+        mobile :  "9632587411",
+        email: "Dummy1@mail.com"
+      },
+      {
+        no: 9,
+        name: "Smith",
+        date: "14-11-2022",
+        location: "Delhi",
+        department: "Finance",
+        manager: "Not Available",
+        mobile :  "9632587412",
+        email: "Dummy2@mail.com"
+      },
+      {
+        no: 10,
+        name: "John",
+        date: "14-11-2022",
+        location: "Bangalore",
+        department: "Development",
+        manager: "Not Available",
+        mobile :  "9632587410",
+        email: "Dummy@mail.com"
+      },
+      {
+        no: 11,
+        name: "Doe",
+        date: "14-11-2022",
+        location: "ITC/Factory",
+        department: "HR/Admin",
+        manager: "Not Available",
+        mobile :  "9632587411",
+        email: "Dummy1@mail.com"
+      },
+      
+    ];
+
+
+    let summary = [
+      {
+        no: 1,
+        name: "John",
+        department: "Development",
+        date: "14-11-2022"
+      },
+      {
+        no: 2,
+        name: "Doe",
+        department: "HR",
+        date: "14-11-2022"
+      },
+      {
+        no: 3,
+        name: "Smith",
+        department: "Sales",
+        date: "14-11-2022"
+      },
+    ];
 
     let FeedbackCategory = [
       {
@@ -4566,6 +4724,10 @@ export class AllModulesData implements InMemoryDbService {
       schedules: schedules,
       CandidateOffer: CandidateOffer,
       PastOffer: PastOffer,
+      summary : summary,
+      notInitiated : notInitiated,
+      skipped : skipped
+
     };
   }
 }
