@@ -201,7 +201,7 @@
             </ul>
           </li>
 
-          <li class="menu-title">
+          <!-- <li class="menu-title">
             <span>Offers</span>
           </li>
           <li class="submenu" [ngClass]="{active: urlComplete.mainUrl === 'layout' &&urlComplete.subUrl === 'offer' }">
@@ -249,10 +249,7 @@
                 >
               </li>
             </ul>
-          </li>
-
-
-
+          </li> -->
 
           <li class="menu-title">
             <span>Employees</span>
@@ -625,8 +622,15 @@
                 <a
                   href="javascript:"
                   [ngClass]="{ active: urlComplete.subUrl === 'skipped' }"
-                  >Skipped</a
+                  >Skipped Initaited</a
                 >
+              </li>
+              <li routerLink="/layout/employees/cancel">
+                <a
+                  href="javascript:"
+                  [ngClass]="{ active: urlComplete.subUrl === 'cancel' }"
+                  >Cancel Initaited
+                </a>
               </li>
             </ul>
           </li>

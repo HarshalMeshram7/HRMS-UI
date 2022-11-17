@@ -4,6 +4,7 @@ import { AllModulesService } from "../../all-modules.service";
 import { ToastrService } from "ngx-toastr";
 import { DataTableDirective } from "angular-datatables";
 import { Subject } from "rxjs";
+import { HttpClient } from "@angular/common/http";
 declare const $: any;
 @Component({
   selector: "app-departments",
@@ -26,7 +27,8 @@ export class DepartmentsComponent implements OnInit {
   constructor(
     private formBuilder: FormBuilder,
     private srvModuleService: AllModulesService,
-    private toastr: ToastrService
+    private toastr: ToastrService,
+    private http : HttpClient
   ) {}
 
   ngOnInit() {
@@ -61,6 +63,9 @@ export class DepartmentsComponent implements OnInit {
   // Get department list  Api Call
   LoadDepartment() {
     this.srvModuleService.get(this.url).subscribe((data) => {
+    // this.http.get('http://localhost:8080/api/getAllDepartments')
+    // .subscribe(data => {
+    console.log(data);
       this.lstDepartment = data;
       this.dtTrigger.next();
       this.rows = this.lstDepartment;

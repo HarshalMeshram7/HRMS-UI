@@ -34,6 +34,7 @@ import { FeedbackCategoryComponent } from './feedback-category/feedback-category
 import { SummaryComponent } from './summary/summary.component';
 import { NotInitiatedComponent } from './not-initiated/not-initiated.component';
 import { SkippedComponent } from './skipped/skipped.component';
+import { CancelledComponent } from './cancelled/cancelled.component';
 
 const routes: Routes = [
   {
@@ -171,6 +172,10 @@ const routes: Routes = [
     {
       path: 'skipped',
       component: SkippedComponent
+    },
+    {
+      path: 'cancel',
+      component: CancelledComponent
     },
 
     ]

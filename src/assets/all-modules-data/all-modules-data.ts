@@ -3,6 +3,29 @@ import { InMemoryDbService } from "angular-in-memory-web-api";
 export class AllModulesData implements InMemoryDbService {
   createDb() {
     // Apps Module Contacts Database
+
+    let cancel = [
+      { no: 1,
+        name: "John Doe",
+        date: "14-11-2022",
+        location: "Bangalore",
+        department: "Development",
+        manager: "Not Available",
+        mobile :  "9632587410",
+        email: "Dummy@mail.com"
+      },
+      {
+        no: 2,
+        name: "Doe John",
+        date: "14-11-2022",
+        location: "ITC/Factory",
+        department: "HR/Admin",
+        manager: "Not Available",
+        mobile :  "9632587411",
+        email: "Dummy1@mail.com"
+      }
+    ];
+
     let skipped = [
         {
           no: 1,
@@ -4726,7 +4749,8 @@ export class AllModulesData implements InMemoryDbService {
       PastOffer: PastOffer,
       summary : summary,
       notInitiated : notInitiated,
-      skipped : skipped
+      skipped : skipped,
+      cancel : cancel
 
     };
   }
