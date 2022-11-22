@@ -35,6 +35,7 @@ import { SummaryComponent } from './summary/summary.component';
 import { NotInitiatedComponent } from './not-initiated/not-initiated.component';
 import { SkippedComponent } from './skipped/skipped.component';
 import { CancelledComponent } from './cancelled/cancelled.component';
+import { PayscheduleComponent } from './payschedule/payschedule.component';
 
 const routes: Routes = [
   {
@@ -176,6 +177,10 @@ const routes: Routes = [
     {
       path: 'cancel',
       component: CancelledComponent
+    },
+    {
+      path: 'payschedule',
+      component: PayscheduleComponent
     },
 
     ]

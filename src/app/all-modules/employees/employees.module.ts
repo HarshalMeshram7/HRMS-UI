@@ -42,9 +42,10 @@ import { SummaryComponent } from './summary/summary.component';
 import { NotInitiatedComponent } from './not-initiated/not-initiated.component';
 import { SkippedComponent } from './skipped/skipped.component';
 import { CancelledComponent } from './cancelled/cancelled.component';
+import { PayscheduleComponent } from './payschedule/payschedule.component';
 // import { DetailsComponent } from './interview-feedback/details/details.component';
 @NgModule({
-  declarations: [EmployeesComponent, AllEmployeesComponent, EmployeePageContentComponent, EmployeeListComponent, EmployeeProfileComponent, HolidaysComponent, LeavesAdminComponent, LeavesEmployeeComponent, LeaveSettingsComponent, AttendanceAdminComponent, AttendanceEmployeeComponent, DepartmentsComponent, DesignationComponent, TimesheetComponent, OvertimeComponent, EmployeeSeriesComponent, CompanySetupComponent, LegalEntitiesComponent, BusinessUnitComponent, HiringOffersComponent, InPobationComponent, EvaluationInProgressComponent, CompletedProbationComponent, ProbationPolicyComponent, CurrentOpeningComponent, CandidatessComponent, ScheduleInterviewComponent, InterviewFeedbackComponent, CandidateOfferComponent, PastOfferComponent, FeedbackCategoryComponent, SummaryComponent, NotInitiatedComponent, SkippedComponent, CancelledComponent,],
+  declarations: [EmployeesComponent, AllEmployeesComponent, EmployeePageContentComponent, EmployeeListComponent, EmployeeProfileComponent, HolidaysComponent, LeavesAdminComponent, LeavesEmployeeComponent, LeaveSettingsComponent, AttendanceAdminComponent, AttendanceEmployeeComponent, DepartmentsComponent, DesignationComponent, TimesheetComponent, OvertimeComponent, EmployeeSeriesComponent, CompanySetupComponent, LegalEntitiesComponent, BusinessUnitComponent, HiringOffersComponent, InPobationComponent, EvaluationInProgressComponent, CompletedProbationComponent, ProbationPolicyComponent, CurrentOpeningComponent, CandidatessComponent, ScheduleInterviewComponent, InterviewFeedbackComponent, CandidateOfferComponent, PastOfferComponent, FeedbackCategoryComponent, SummaryComponent, NotInitiatedComponent, SkippedComponent, CancelledComponent, PayscheduleComponent,],
   imports: [
     CommonModule,
     FormsModule,

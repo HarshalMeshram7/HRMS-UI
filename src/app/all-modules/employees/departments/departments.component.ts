@@ -140,4 +140,6 @@ export class DepartmentsComponent implements OnInit {
     // Do not forget to unsubscribe the event
     this.dtTrigger.unsubscribe();
   }
-}
+} 
+
+
