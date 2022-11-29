@@ -1,4 +1,4 @@
-import { NgModule } from '@angular/core';
+import { Component, NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { EmployeesComponent } from './employees.component';
 import { EmployeePageContentComponent } from './all-employees/employee-page-content/employee-page-content.component';
@@ -36,6 +36,8 @@ import { NotInitiatedComponent } from './not-initiated/not-initiated.component';
 import { SkippedComponent } from './skipped/skipped.component';
 import { CancelledComponent } from './cancelled/cancelled.component';
 import { PayscheduleComponent } from './payschedule/payschedule.component';
+import { PayrollEventsComponent } from './payroll-events/payroll-events.component';
+import { PayrollClassComponent } from './payroll-class/payroll-class.component';
 
 const routes: Routes = [
   {
@@ -182,7 +184,14 @@ const routes: Routes = [
       path: 'payschedule',
       component: PayscheduleComponent
     },
-
+    {
+      path: 'payroll-events',
+      component: PayrollEventsComponent
+    },
+    {
+      path: 'payroll-class',
+      component: PayrollClassComponent
+    }
     ]
   }
 ];
